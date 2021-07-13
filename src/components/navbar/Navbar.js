@@ -1,32 +1,42 @@
 import React from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
+import Logo from '../../sv-logo.svg';
+import Halal from '../../halal_logo.svg';
+import {SiFacebook} from 'react-icons/si';
+import {AiOutlineInstagram} from 'react-icons/ai'
 
 const Navbar = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.logo_container}>
-            <h1 className={styles.logo}>
-                Logo Here
-            </h1>
+        <div className={styles.left_nev}>
+          <img src={Halal} alt="halallogo" />
+          <h2 className={styles.left_nev_text}>Call <a href="tel:020 8680 8844" data-tip="" className={styles.telno}> 020 8680 8844 </a></h2>
+        </div>
+        <div className={styles.center_nev}>
+          <h1>Logo</h1>
+        </div>
+        <div className={styles.right_nev}>
+          <h2>Follow us <SiFacebook /> <AiOutlineInstagram /></h2>
+          
         </div>
       </div>
       <div className={styles.links}>
           <Link to="/"> 
-            <button className={styles.linkbtn}>Main</button>
+            <button className={styles.linkbtn}>Pakistan Wedding</button>
           </Link>
           <Link to="/about">
+            <button className={styles.linkbtn}>Last Minute Offers</button>
+          </Link>
+          <Link>
             <button className={styles.linkbtn}>About</button>
-          </Link>
-          <Link>
-            <button className={styles.linkbtn}>Contact</button>
-          </Link>
-          <Link>
-            <button className={styles.linkbtn}>Pakistan Wedding</button>
           </Link>
           <Link to='/gallery'>
             <button className={styles.linkbtn}>Gallery</button>
+          </Link>
+          <Link to='/contact'>
+            <button className={styles.linkbtn}>Contact Us</button>
           </Link>
         </div>
     </>
