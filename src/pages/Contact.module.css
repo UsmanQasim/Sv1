@@ -1,0 +1,106 @@
+.contact_section_1{
+    height: 800px;
+    background-image: url(https://spicevillage.co.uk/wp-content/uploads/2019/03/contact-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+.contact_section_1:before{
+    content: "";
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.contact_section_1 .banner_inner {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 20px;
+}
+
+.banner_content{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    max-width: 700px;
+    padding: 20px 20px 50px 20px;
+}
+.banner_content_header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+.banner_content_header h4{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3b3f3f;
+}
+.banner_content_inputs{
+    height: 90%;
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.inputs{
+    width:  70%;
+    height: 40px;
+    padding: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+.checkboxs{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 8px;
+    max-width: 500px;
+}
+.checkboxs input{
+    margin-top: 4px;
+}
+
+.checkboxs p{
+    font-size: 15px;
+    margin-left: 8px;
+}
+.submitbtn{
+    border: 0;
+    width: 156px;
+    height: 55px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: ease-in-out .3s;
+    background-color:#9d915d;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 10px 20px -10px rgb(0 0 0 / 75%);
+}
+.submitbtn:hover{
+    background-color:#3B3F3F;
+    color: #9d915d;
+}

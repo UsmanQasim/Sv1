@@ -8,6 +8,8 @@ import Halal from '../../halal_logo.svg';
 import { SiFacebook } from 'react-icons/si';
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi';
+import logo from "../../GalleryPhotos/SVlogo.png"
+import realLogo from "../../sv-logo.png"
 
 const Navbar = () => {
   return (
@@ -18,7 +20,7 @@ const Navbar = () => {
           <h2 className={styles.left_nev_text}>Call &nbsp;<a href="tel:020 8680 8844" data-tip="" className={styles.telno}> 020 8680 8844 </a></h2>
         </div>
         <div className={styles.center_nev}>
-          <h1>Logo</h1>
+          <img src={logo} alt="little" className={styles.logoimg} />
         </div>
         <div className={styles.right_nev}>
           <p className={styles.right_nev_text}>follow us&nbsp;
@@ -30,12 +32,12 @@ const Navbar = () => {
       </div>
       <div className={styles.links}>
         <Link to="/">
-          <button className={styles.linkbtn}>Pakistan Wedding</button>
+          <button className={styles.linkbtn}>Pakistani Wedding</button>
         </Link>
-        <Link to="/about">
+        <Link to="/lastminuteoffers">
           <button className={styles.linkbtn}>Last Minute Offers</button>
         </Link>
-        <Link>
+        <Link to='/about'>
           <button className={styles.linkbtn}>About</button>
         </Link>
         <Link to='/gallery'>

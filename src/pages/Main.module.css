@@ -1,31 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+
 .coursal_container{
     width: 100%;
     height: 100%;
-    margin-top: 10px;
+    /* margin-top: 10px; */
  }
 
  .carousel-style{
     height: 100% !important;
 
  }
+ .carousel-caption{
+    bottom: 150px !important;
+ }
+
  .coursal_text{
      color: black;
      display: flex;
      justify-content: center;
+     bottom: 180px !important;
      align-items: center;
-     text-align: center;
+     text-align: justify;
      z-index: 2;
  }
 .text{
-    font-size: 50px;
+    font-size: 42px;
+    text-align: center;
     color: white;
     font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans',sans-serif;
     text-shadow: 2px 2px black;
      /* -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: black; */
 }
-
+.textby{
+    font-family: 'Petit Formal Script',cursive;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}
+.buttonArea{
+     bottom: 100px !important; 
+}
+.btnCou{
+    padding: 20px 20px 18px 20px;
+    display: inline-block;
+    font-weight: 200;
+    min-width: 156px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    background-color: #9d915d;
+    border: 0;
+    transition: all ease-in-out .3s 0s;
+}
+.btnCou:hover{
+    background-color: #3b3f3f;
+}
  .slider-item-div {
     padding: 20px;
     text-align: center;
@@ -41,8 +76,298 @@
     background: black;
     filter: brightness(40%);
 }
+
+/* Section 3 */
+.section_3{
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* height: 100vh;*/
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.imgstory{
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.title_story{
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #9d915d;
+    letter-spacing: 1.2px;
+}
+b{
+    font-size: 16px;
+    text-align: left;
+    color: rgb(68, 63, 63);
+}
+p{
+    margin-bottom: .3rem;
+    max-width: 750px;
+    color: #3b3f3f;
+    text-align: justify;
+    font-size: 14px;
+    font-family: Merriweather,serif;
+}
+.paragraph{
+    max-width: 940px;
+    line-height: 1.7;
+    color: #3b3f3f;
+    font-weight: 500;
+    font-size: large;
+}
+
+/* Section 4 */
+.section_4{
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* height: 75vh; */
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+.imgleft{
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+}
+
+.section_4_left_div{
+    margin-top: 5px;
+    height: 100%;
+    width: 120%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+}
+.text_section_4_head{
+    font-size: larger;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    text-transform: uppercase;   
+}
+.headertitle{
+    color: #9d915d;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    font-family: Merriweather,serif;
+}
+.right_div_text_sec4{
+    color: #565555;
+    font-size: 16px;
+}
+
+.section_4_right_div{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 24px 24px 24px ;
+}
+/**/
+.section_5{
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* height: 75vh; */
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 15px;
+}
+.section_5_left_div{
+    margin-top: 5px;
+    height: 100%;
+    width: 80%;
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+}
+.text_section_5_head{
+    font-size: larger;
+    letter-spacing: 1.2px;
+    font-weight: 800;
+    text-transform: uppercase;   
+}
+
+.right_div_text_sec5{
+    color: #565555;
+    font-size: 16px;
+}
+
+.section_5_right_div{
+    display: flex;
+    width: 120%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 24px 24px 24px ;
+}
+/*  */
+.strip{
+    background-color: #9D915D;
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.strip_container{
+    display: flex;
+    padding-left: 20px;
+    margin-left: 160px;
+    max-width: 1200px;
+}
+
+
+.smallicon{
+    width: auto;
+    height: 80px;
+    filter: invert(7%) sepia(100%) saturate(8000%) hue-rotate(800deg) brightness(94%) contrast(89%);
+}
+.strip_left_text{
+    margin-left: 30px;
+}
+.strip_left_text p,
+.strip_left_text h3{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: Merriweather,serif;;
+    color:white;
+    
+    word-spacing: 3px;
+}
+
+
+/* */
+
+.catering_section{
+    background: url(../GalleryPhotos/spice-village-experience-min.jpg) no-repeat fixed center;
+    height: 700px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 14rem;
+}
+.catering_section .container{
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.container_text_h1{
+    font-size: 7.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.container_text_p{
+    font-family: 'Petit Formal Script', cursive;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+.floating_goldbar{
+    bottom: -200px;
+    background: #9d915d;
+    color: #fff;
+    padding: 5rem 0 5rem 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1170px;
+    position: absolute;
+    bottom: -110px;
+    text-align: left;
+    left: 0;
+    right: 0;
+}
+.goldbar_container{
+    max-width: 980px;
+    width: 100%;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.floating_goldbar h2{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    line-height: 1.4rem ;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.btn_exp{
+    background-color: #fff;
+    padding: 20px 20px 18px 20px;
+    text-align: center;
+    display: inline-block;
+    font-weight: 700;
+    min-width: 156px;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    color:#3b3f3f;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.624);
+    transition: ease-in-out 0.3s;
+}
+.btn_exp:hover{
+    color: #9D915D;
+    background-color: black;
+}
+.btnwrap{
+    text-align: center;
+    position: absolute;
+    bottom: -43px;
+    margin-bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+
+
+/*  */
+
 .pakistanwed_section{
     width: 100%;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
 }

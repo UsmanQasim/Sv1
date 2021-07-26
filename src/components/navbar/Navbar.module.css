@@ -7,7 +7,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 75px;
+    height: 80px;
+    margin-bottom: 5px;
+    margin-top: 5px;
         
 }
 .left_nev{
@@ -35,11 +37,10 @@
     transition: ease-in-out .3s;
 }
 .telno:hover{
-    font-style:oblique;
+    text-decoration: none;
     font-weight: bold;
-    color: rgb(118, 49, 175);
+    color: rgb(104, 88, 88);
 }
-
 .right_nev{
     display: flex;
     text-align: right;
@@ -55,8 +56,12 @@
 
 
 .logoimg{
-    width: 75px;
-    height: 75px;
+    /* object-fit: cover;
+    width: auto; */
+    height: 90px;
+}
+.logoimg:hover{
+    cursor: pointer;
 }
 
 .logo{
@@ -65,8 +70,7 @@
 
 .right_nev_text{
     margin: 0;
-    display: flex;
-    width: 180px;
+    display: flex;  
     font-family: Merriweather,serif;
     font-weight: 700;
     font-style: italic;
@@ -88,18 +92,19 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1px;
+    margin-top: 15px;
     height: 80px;
     background-color: #9d915d;;
         
 }
 .linkbtn{
     width: 250px;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     text-transform: uppercase;
-    font-family: 'verdena',sans-serif;;
-    font-weight: bolder;
-    height: 45px;
+    font-family: 'Josefin Sans',sans-serif;
+    font-weight: 700;
+    /* height: 45px; */
+    letter-spacing: 2px;
     color: white;
     position: relative;
     border: 0;
