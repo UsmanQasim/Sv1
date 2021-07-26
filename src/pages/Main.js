@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import style from '../pages/Main.module.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Coursal from "../pages/Coursal";
 import Carousel from 'react-bootstrap/Carousel'
 import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg"
 import img2 from "../GalleryPhotos/garden-room-at-syon-park.jpg"
@@ -17,6 +18,7 @@ import small6 from "../GalleryPhotos/sponsor slides/hmc-min.png"
 import small7 from "../GalleryPhotos/sponsor slides/hsqc-min.png"
 import small8 from "../GalleryPhotos/sponsor slides/ISO-9001-min.png"
 import small9 from "../GalleryPhotos/sponsor slides/qms-min.png";
+
 
 const Main = () => {
 
@@ -125,15 +127,15 @@ const Main = () => {
 
                 <div className={style.strip}>
                     <div className={style.strip_container}>
-                            <img src={logo} alt="little" className={style.smallicon} />
+                        <img src={logo} alt="little" className={style.smallicon} />
                         <div className={style.strip_left_text}>
                             <p className={style.pr}>Want to view & book your next event?</p>
-                            <h3>Call Us Now 020 8680 8844</h3>
+                            <h3 className={style.callpr}>Call Us Now 020 8680 8844</h3>
                         </div>
                     </div>
                 </div>
 
-                {/*                 
+
                 <section className={style.catering_section}>
                     <div className={style.container}>
                         <h1 className={style.container_text_h1}>Catering</h1>
@@ -141,18 +143,70 @@ const Main = () => {
                     </div>
                     <div className={style.floating_goldbar}>
                         <div className={style.goldbar_container}>
-                            <h2>SPICE VILLAGE EXPERIENCE</h2>
-                            <p>At Spice Village, every menu has its unique story and origin.  Spice Village specialises in Halal Indian catering and Pakistani catering where all delectable dishes are handpicked by our award-winning chefs offering a wide range of choices while using the finest and freshest of healthy ingredients. Our expert team will organise complementary food tasting session helping you design a bespoke menu for your unforgettable event.</p>
-                            <div className={style.btnwrap}> 
-                                <button className={style.btn_exp}>View Our Menus </button>
+                            <h2 className={style.golhead}>SPICE VILLAGE EXPERIENCE</h2>
+                            <p className={style.exppra}>At Spice Village, every menu has its unique story and origin.  Spice Village specialises in Halal Indian catering and Pakistani catering where all delectable dishes are handpicked by our award-winning chefs offering a wide range of choices while using the finest and freshest of healthy ingredients. Our expert team will organise complementary food tasting session helping you design a bespoke menu for your unforgettable event.</p>
+                            <div className={style.btnwrap}>
+                                <button className={style.btn_exp}>View Our Menu </button>
                             </div>
                         </div>
                     </div>
                 </section>
-                 */}
+
 
                 <div>
-                    <h2>Sliding Images Of Sponsors</h2>
+                    <Coursal
+                        show={4}
+                        infiniteLoop={true}
+                        autoplayInterval={3}
+                        autoplay
+                        // loop
+                    >
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small1} alt="placeholder" className={style.sliderImg}/>
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small2} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small3} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small4} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small5} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small6} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small7} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small8} alt="placeholder" />
+                        </div>
+                    </div>
+                    <div>
+                        <div style={{padding: 8}} className={style.sliderDiv}>
+                            <img src={small9} alt="placeholder" />
+                        </div>
+                    </div>
+                    </Coursal>
                 </div>
                 {/* 
                 <div className={style.section_4}>
@@ -175,11 +229,11 @@ const Main = () => {
                         </p>
                     </div>
                 </div> */}
-                {/* 
+                 
                 <div className={style.pakistanwed_section}>
                     <h2 style={{ textAlign: 'center', marginTop: '10px' }}>Section 5</h2>
                 </div>
-             */}
+             
             </div>
         </>
 

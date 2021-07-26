@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import DatePicker from 'react-date-picker';
 import style from '../pages/Contact.module.css'
 
 const Contact = () => {
@@ -18,12 +17,7 @@ const Contact = () => {
                             <input className={style.inputs} type='eamil' placeholder='Email Address' />
                             <input className={style.inputs} type='number' placeholder='Number Of Guests' />
                             <input className={style.inputs} placeholder='Prefered Date Of Event' type="text" onfocus="(this.type = 'date')" id="date" />
-                            {/* <DatePicker
-                                onChange={onChange}
-                                value={value}
-                                placeholder='Hello'
-                                calendarClassName={style.input}
-                            /> */}
+                            
                             <select className={style.inputs} placeholder='Type Of Event'>
                                 <option value="*" selected disabled>Type Of Event</option>
                                 <option value="Wedding">Wedding</option>

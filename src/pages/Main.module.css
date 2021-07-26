@@ -115,7 +115,7 @@ p{
     max-width: 750px;
     color: #3b3f3f;
     text-align: justify;
-    font-size: 14px;
+    font-size: 15px;
     font-family: Merriweather,serif;
 }
 .paragraph{
@@ -243,20 +243,29 @@ p{
 .smallicon{
     width: auto;
     height: 80px;
-    filter: invert(7%) sepia(100%) saturate(8000%) hue-rotate(800deg) brightness(94%) contrast(89%);
+    filter: invert(7%) sepia(100%) saturate(3%) hue-rotate(900deg) brightness(94%) contrast(2000%);
 }
 .strip_left_text{
     margin-left: 30px;
 }
 .strip_left_text p,
 .strip_left_text h3{
-    font-size: 18px;
-    font-weight: 800;
-    font-family: Merriweather,serif;;
     color:white;
-    
-    word-spacing: 3px;
 }
+.pr{
+    word-spacing: 3px;
+    padding-top: 8px;
+    font-size: 20px;
+    font-family: 'Merriweather',serif;
+}
+.callpr{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    font-family: 'Josefin Sans',sans-serif;
+}
+
 
 
 /* */
@@ -294,6 +303,9 @@ p{
     color: white;
     text-align: center;
     font-weight: 600;
+    max-width: 940px;
+    text-align: center;
+    font-size: 1.7rem;
 }
 .floating_goldbar{
     bottom: -200px;
@@ -327,6 +339,19 @@ p{
     text-transform: uppercase;
     font-weight: 600;
 }
+.golhead{
+    word-spacing: 1px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    font-size: 2.5rem;
+    font-family: 'Josefin',sans-serif;
+}
+.exppra{
+    max-width: 940px;
+    font-size: 1.2rem;
+    font-family:'Josefin',sans-serif;
+    font-weight: 500;
+}
 .btn_exp{
     background-color: #fff;
     padding: 20px 20px 18px 20px;
@@ -355,7 +380,12 @@ p{
     left: 0;
     right: 0;
 }
-
+/**/
+.sliderDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 /*  */
