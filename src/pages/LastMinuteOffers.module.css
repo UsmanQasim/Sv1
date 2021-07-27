@@ -52,7 +52,7 @@ input{
     margin-top: 2px;
     padding-left: 3px;
     height: 70px;
-    background-color: lightpink;
+    background-color: rgb(181, 159, 75);
     width: 80%;
     display: flex;
     justify-content: flex-start;

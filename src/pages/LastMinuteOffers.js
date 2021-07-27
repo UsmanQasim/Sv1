@@ -38,23 +38,23 @@ const LastMinuteOffers = () => {
                     <div style={{ flexDirection: 'column', height: '170px', justifyContent: 'center',alignItems: 'flex-start' }} className={style.nameinput}>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
                             <input type='checkbox' checked/><label>Wedding Package &nbsp; &nbsp;</label>
-                            <input type='checkbox' /><label>Wedding Abroad &nbsp; &nbsp;</label>
+                            <input type='checkbox' /><label>Wedding Abroad </label>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <input type='checkbox' /><label>Wedding Vanue &nbsp; &nbsp;</label>
-                            <input type='checkbox' /><label>Honeymoon &nbsp; &nbsp;</label>
+                            <input type='checkbox' /><label>Wedding Vanue &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type='checkbox' /><label>Honeymoon </label>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <input type='checkbox' /><label>Entertainer &nbsp; &nbsp;</label>
-                            <input type='checkbox' /><label>Photographer &nbsp; &nbsp;</label>
+                            <input type='checkbox' /><label>Entertainer &#8195;&#8195;&#8199;&nbsp;&#8195;</label>
+                            <input type='checkbox' /><label>Photographer </label>
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'row'}}>
+                            <input type='checkbox' /><label>Florist &#8195;&nbsp;&#8195;&#8195;&#8199;&#8195;&nbsp;&#8195;</label>
+                            <input type='checkbox' /><label>Caterer  </label>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <input type='checkbox' /><label>Florist &nbsp; &nbsp;</label>
-                            <input type='checkbox' /><label>Caterer &nbsp; &nbsp;</label>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'row' }}>
-                            <input type='checkbox' /><label>Wedding Planner &nbsp; &nbsp;</label>
-                            <input type='checkbox' /><label>Coordinator &nbsp; &nbsp;</label>
+                            <input type='checkbox' /><label>Wedding Planner &nbsp;&nbsp;&#8199;</label>
+                            <input type='checkbox' /><label> Coordinator </label>
                         </div>
                     </div>
                 </div>
