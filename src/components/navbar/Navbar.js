@@ -1,16 +1,17 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col } from 'reactstrap';
+import Sidemenu from "../sidemenu/Sidemenu";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 import Logo from '../../sv-logo.svg';
 import Halal from '../../halal_logo.svg';
 import { SiFacebook } from 'react-icons/si';
 import { AiOutlineInstagram } from 'react-icons/ai'
-import { GiHamburgerMenu } from 'react-icons/gi';
 import logo from "../../GalleryPhotos/SVlogo.png"
-import realLogo from "../../sv-logo.png"
 
+function showSettings (event) {
+  event.preventDefault();
+}
 const Navbar = () => {
   return (
     <>
@@ -26,7 +27,7 @@ const Navbar = () => {
           <p className={styles.right_nev_text}>follow us&nbsp;
             <a href="https://www.facebook.com/spicevillageofficial/"><SiFacebook className={styles.right_icons} /></a>&nbsp;
             <a href="https://www.instagram.com/spicevillageevents/"><AiOutlineInstagram className={styles.right_icons} /></a>&nbsp;
-            <GiHamburgerMenu className={styles.right_icons} />&nbsp;
+            <Sidemenu />
           </p>
         </div>
       </div>

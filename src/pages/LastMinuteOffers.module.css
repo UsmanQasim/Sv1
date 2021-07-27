@@ -25,34 +25,39 @@ form{
 .labelinput{
     width: 20%;
     padding-top: 2px;
-    padding-left: 4px;
-    font-size: 13px;
+    padding-left: 8px;
+    padding-right: 2px;
+    font-size: 15px;
     height: 70px;
-    font-family:"DejaVuSans",sans-serif;
-    font-weight: 550;
+    /* font-family:"DejaVuSans",sans-serif;
+     */
+     font-family: Merriweather,sans-serif;
+    font-weight: 560;
     letter-spacing: 1.3px;
+    background-color: gainsboro;
     margin-top: 1.5px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color:white;
 }
 
 input{
-    border: 0;
+    border: 1;
+    border-color: gold;
     height: 30px;
     border-radius: 5px;
     text-align: center;
 }
 .inputs{
     width: 300px;
+    font-family: Merriweather,serif;
 }
 
 .nameinput{
     margin-top: 2px;
-    padding-left: 3px;
+    font-family: Merriweather,serif;
+    padding-left: 10px;
     height: 70px;
-    background-color: rgb(181, 159, 75);
     width: 80%;
     display: flex;
     justify-content: flex-start;
