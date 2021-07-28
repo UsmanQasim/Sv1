@@ -1,5 +1,11 @@
 import React from "react";
 import style from "../pages/LastMinuteOffers.module.css";
+import ReCAPTCHA from "react-google-recaptcha";
+import { Button } from "react-bootstrap";
+
+function onChange(value) {
+  console.log("Captcha value:", value);
+}
 
 const LastMinuteOffers = () => {
   return (
@@ -46,31 +52,34 @@ const LastMinuteOffers = () => {
             className={style.nameinput}
           >
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" checked />
-              <label>&nbsp;Wedding Package &nbsp; &nbsp;</label>
               <input type="checkbox" />
-              <label>&nbsp;Wedding Vanue </label>
-            </div>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" />
-              <label>
-                &nbsp;Entertainer &#8195;&#8195;&#8199;&nbsp;&#8195;
+              <label className={style.labelcheckbox}>
+                &nbsp;Wedding Package &nbsp; &nbsp;
               </label>
               <input type="checkbox" />
-              <label>&nbsp;Photographer </label>
+              <label className={style.labelcheckbox}>
+                &nbsp;Wedding Vanue{" "}
+              </label>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <input type="checkbox" />
-              <label>
-                &nbsp;Decor
-                &#8195;&nbsp;&#8195;&#8195;&#8199;&#8195;&nbsp;&#8195;
+              <label className={style.labelcheckbox}>
+                &nbsp;Entertainer &#8195;&#8195;&#8199;&#8199;&#8199;
               </label>
               <input type="checkbox" />
-              <label>&nbsp;Caterer </label>
+              <label className={style.labelcheckbox}>&nbsp;Photographer </label>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
               <input type="checkbox" />
-              <label>&nbsp;Wedding Cake </label>
+              <label className={style.labelcheckbox}>
+                &nbsp;Decor &#8195;&#8199;&#8195;&#8195;&#8199;&#8195;&#8199;
+              </label>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>&nbsp;Caterer </label>
+            </div>
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>&nbsp;Wedding Cake </label>
             </div>
           </div>
         </div>
@@ -104,20 +113,25 @@ const LastMinuteOffers = () => {
             className={style.nameinput}
           >
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" checked />
-              <label>&nbsp;Close</label>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>&nbsp;Close</label>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" checked />
-              <label>&nbsp;Less than 5 miles</label>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>
+                &nbsp;Less than 5 miles
+              </label>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" checked />
-              <label>&nbsp;I don't Care</label>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>&nbsp;I don't Care</label>
             </div>
             <div style={{ display: "flex", flexDirection: "row" }}>
-              <input type="checkbox" checked />
-              <label> &nbsp;Within 2 Hours </label>
+              <input type="checkbox" />
+              <label className={style.labelcheckbox}>
+                {" "}
+                &nbsp;Within 2 Hours{" "}
+              </label>
             </div>
           </div>
         </div>
@@ -178,7 +192,7 @@ const LastMinuteOffers = () => {
           <div className={style.nameinput}>
             <select className={style.inputs}>
               <option value="*" selected disabled>
-                Type Of Event
+                Tell Us
               </option>
               <option value="Internet Search">Internet Search</option>
               <option value="Advertisment">Advertisment</option>
@@ -190,7 +204,19 @@ const LastMinuteOffers = () => {
             </select>
           </div>
         </div>
+        <div>
+          <ReCAPTCHA
+            sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt"
+            onChange={onChange}
+          />
+        </div>
+        <div>
+          <Button variant="outline-primary" size="lg">
+            Submit
+          </Button>
+        </div>
       </form>
+      <div style={{ height: "50px;", marginBottom: 150 }}></div>
     </>
   );
 };

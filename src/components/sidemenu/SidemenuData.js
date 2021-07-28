@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 export const SidemenuData = [
   {
-    title: "Pak Wed",
+    title: "Pakistan Wedding",
     path: "/",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",
   },
   {
-    title: "L M O",
+    title: "Last Minute Offers",
     path: "/",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",

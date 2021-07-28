@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <div className={styles.container}>
         <div className={styles.left_nev}>
-          <img src={Halal} alt="halallogo" />
+          <img src={Halal} alt="halallogo" className={styles.halallogo}/>
           <h2 className={styles.left_nev_text}>Call &nbsp;<a href="tel:020 8680 8844" data-tip="" className={styles.telno}> 020 8680 8844 </a></h2>
         </div>
         <div className={styles.center_nev}>

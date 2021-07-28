@@ -1,83 +1,81 @@
-
-.navbar{
-    height: 80px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
+.navbar {
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
-.menu-bar{
-    margin-left: 2rem;
-    font-size: 2rem;
-    background: none;
-
+.menu-bar {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
 }
 
-.nav-menu{
-    background-color: white;
-    width: 250px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    right: -100%;
-    top: 0;
-    transition: 850ms;
+.nav-menu {
+  background-color: white;
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: 850ms;
 }
 
-.nav-menu.active{
-    right: 0;
-    transition: 350ms;
+.nav-menu.active {
+  right: 0;
+  transition: 350ms;
 }
 
-.nav-text{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 10px;
-    font-family:'Josefin', sans-serif;
-    text-decoration: none;
-    padding: 8px,0px 8px 16px;
-    list-style: none;
-    height: 60px;
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 10px;
+  font-family: "Josefin", sans-serif;
+  text-decoration: none;
+  padding: 8px, 0px 8px 16px;
+  list-style: none;
+  height: 60px;
 }
 
 .nav-text a {
-    text-decoration: none;
-    color: #9d915d;
-    font-size: 18px;
-    border-block-color: green;
-    border-top:    1px solid  gray;
-    border-bottom: 1px solid gray;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
+  text-decoration: none;
+  color: #9d915d;
+  font-size: 18px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  width: 295px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
 }
 
-.nav-text a:hover{
-    background-color: #1a83ff;
+.nav-text a:hover {
+  background-color: #1a83ff;
+  color: white;
+  font-weight: 800;
 }
-.nav-meny-items{
-    width: 100%;
-}
-
-.nav-toggle{
-    background-color: #060b26;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+.nav-meny-items {
+  width: 100%;
 }
 
-span{
-    margin-left: 16px;
+.nav-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
-.icon-style{
-    color: #9d915d;
-    font-size: 25px;
+span {
+  margin-left: 16px;
+}
+
+.icon-style {
+  color: #9d915d;
+  font-size: 25px;
 }

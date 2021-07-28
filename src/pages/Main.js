@@ -190,7 +190,20 @@ const Main = () => {
             <img src={logo} alt="little" className={style.smallicon} />
             <div className={style.strip_left_text}>
               <p className={style.pr}>Want to view & book your next event?</p>
-              <h3 className={style.callpr}>Call Us Now 020 8680 8844</h3>
+              <h3 className={style.callpr}>
+                Call Us Now{" "}
+                <a
+                  href="tel:020 8680 8844"
+                  data-tip=""
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    wordSpacing: "1px",
+                  }}
+                >
+                  020 8680 8844
+                </a>
+              </h3>
             </div>
           </div>
         </div>
@@ -276,10 +289,6 @@ const Main = () => {
               </div>
             </div>
           </Coursal>
-        </div>
-
-        <div className={style.pakistanwed_section}>
-          <h2 style={{ textAlign: "center", marginTop: "10px" }}>Section 5</h2>
         </div>
       </div>
     </>

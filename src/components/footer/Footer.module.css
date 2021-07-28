@@ -1,0 +1,68 @@
+.mainContainer {
+  width: 100%;
+  margin-top: 10px;
+}
+.svbar {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin: 5rem 0 0 0;
+}
+
+.svbar:before {
+  content: "";
+  border-top: 1px solid #9d915d;
+  height: 1px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  position: absolute;
+}
+.svbar .svbarlogo {
+  background: #fff;
+  padding: 2rem 4rem;
+  position: relative;
+}
+.svlogo {
+  height: 75px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.container .links {
+  text-decoration: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Josefin", sans-serif;
+  color: rgb(59, 63, 63);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.container .links:hover {
+  color: #9d9d9d;
+}
+
+.bottomLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}

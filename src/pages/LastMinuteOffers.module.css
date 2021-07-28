@@ -1,66 +1,70 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    height: auto;
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: auto;
 }
 
-.sections{
-    display: flex;
-    width: 100%;
-    max-width: 1000px;
-    justify-content: space-between;
-    align-items: center;
+.sections {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  align-items: center;
 }
-.labelinput{
-    width: 20%;
-    padding-top: 2px;
-    padding-left: 8px;
-    padding-right: 2px;
-    font-size: 15px;
-    height: 70px;
-    /* font-family:"DejaVuSans",sans-serif;
+label {
+  margin-bottom: 0;
+}
+.labelinput {
+  width: 30%;
+  padding-top: 2px;
+  padding-left: 8px;
+  padding-right: 2px;
+  font-size: 15px;
+  height: 70px;
+  /* font-family:"DejaVuSans",sans-serif;
      */
-     font-family: Merriweather,sans-serif;
-    font-weight: 560;
-    letter-spacing: 1.3px;
-    background-color: gainsboro;
-    margin-top: 1.5px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  font-family: Merriweather, sans-serif;
+  font-weight: 560;
+  letter-spacing: 1.3px;
+  background-color: gainsboro;
+  margin-top: 1.5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.labelcheckbox {
+  padding: 7px 0px 0px 0px;
+}
+input {
+  border: 1;
+  border-color: rgb(196, 194, 194);
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+}
+.inputs {
+  width: 300px;
+  font-family: Merriweather, serif;
 }
 
-input{
-    border: 1;
-    border-color: gold;
-    height: 30px;
-    border-radius: 5px;
-    text-align: center;
-}
-.inputs{
-    width: 300px;
-    font-family: Merriweather,serif;
-}
-
-.nameinput{
-    margin-top: 2px;
-    font-family: Merriweather,serif;
-    padding-left: 10px;
-    height: 70px;
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+.nameinput {
+  margin-top: 2px;
+  font-family: Merriweather, serif;
+  padding-left: 10px;
+  height: 70px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
