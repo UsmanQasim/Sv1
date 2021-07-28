@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "../pages/Main.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Coursal from "../pages/Coursal";

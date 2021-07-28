@@ -1,7 +1,5 @@
 import React from "react";
 import * as AiIcons from "react-icons/ai";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
 
 export const SidemenuData = [
   {

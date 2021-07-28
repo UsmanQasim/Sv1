@@ -1,7 +1,7 @@
 .navbar {
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 .menu-bar {
@@ -29,7 +29,7 @@
 
 .nav-text {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin: 10px;
   font-family: "Josefin", sans-serif;
@@ -67,7 +67,7 @@
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 

@@ -3,7 +3,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import style from "../pages/Contact.module.css";
 
 const Contact = () => {
-  const [value, onChange] = useState(new Date());
+  const [onChange] = useState(new Date());
+
   return (
     <>
       <section className={style.contact_section_1}>
