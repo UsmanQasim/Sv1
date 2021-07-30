@@ -58,8 +58,6 @@
 }
 
 .logoimg {
-  /* object-fit: cover;
-  width: auto; */
   height: 90px;
 }
 .logoimg:hover {
@@ -126,7 +124,6 @@
 .linkbtn:hover {
   text-shadow: 0 0 5px black;
   color: rgb(255, 255, 255);
-  font-size: larger;
   transition: 0.6s;
   transition-property: ease-in-out;
   cursor: pointer;
@@ -220,56 +217,3 @@
     font-size: 4px;
   }
 }
-/* 
-@media(max-width: 480px){
-    .container{
-        max-width: 480px;
-        height: 50px;
-    }
-    .left_nev{
-        width: 60vw;
-    }
-    .halallogo{
-        height: 15px;
-    }
-    .left_nev_text{
-        font-size: 1rem;
-    }
-    .logoimg{
-        height: 50px;
-    }
-    .telno{
-        font-size: 13px;
-    }
-
-    .left_nev{
-                   
-    }
-    .left_nev_text{
-       
-    }
-    
-    .right_nev{
-        
-    }
-    
-    .center_nev{
-        text-align: center;
-        width: 50%;
-    }
-    
-    .logo{
-        color: bisque;
-    }
-    
-    .right_nev_text{
-       
-    }
-    .right_icons{
-        
-    }
-    .right_icons:hover{
-        color: black;
-    }
-    
-} */
