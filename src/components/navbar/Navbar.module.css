@@ -7,11 +7,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  height: 90px;
   width: 100%;
   max-width: 1300px;
   margin-bottom: 5px;
   margin-top: 5px;
+  z-index: 15;
 }
 .left_nev {
   color: #9d915d;
@@ -59,6 +63,7 @@
 
 .logoimg {
   height: 90px;
+  padding: 2px;
 }
 .logoimg:hover {
   cursor: pointer;
@@ -100,7 +105,7 @@
   color: black;
 }
 
-.links {
+.linkscontainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -213,6 +218,9 @@
   }
 }
 @media (max-width: 400px) {
+  .linkscontainer {
+    display: none;
+  }
   .linkbtn {
     font-size: 4px;
   }

@@ -28,19 +28,25 @@ const Navbar = () => {
         <div className={styles.right_nev}>
           <p className={styles.right_nev_text}>
             <p className={styles.follow_p}>follow us&nbsp; </p>
-            <a href="https://www.facebook.com/spicevillageofficial/">
+            <a
+              href="https://www.facebook.com/spicevillageofficial/"
+              target="_blank"
+            >
               <SiFacebook className={styles.right_icons} />
             </a>
             &nbsp;
-            <a href="https://www.instagram.com/spicevillageevents/">
+            <a
+              href="https://www.instagram.com/spicevillageevents/"
+              target="_blank"
+            >
               <AiOutlineInstagram className={styles.right_icons} />
             </a>
             &nbsp;
-            <Sidemenu />
+            {/* <Sidemenu /> */}
           </p>
         </div>
       </div>
-      <div className={styles.links}>
+      <div className={styles.linkscontainer}>
         <Link to="/">
           <button className={styles.linkbtn}>Pakistani Wedding</button>
         </Link>

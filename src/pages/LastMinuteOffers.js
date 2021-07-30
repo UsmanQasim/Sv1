@@ -211,20 +211,20 @@ const LastMinuteOffers = () => {
               </select>
             </div>
           </div>
-          <div>
+          <div className={style.recap}>
             <ReCAPTCHA
               sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt"
               onChange={onChange}
             />
           </div>
-          <div>
+          <div className={style.btnSubmit}>
             <Button variant="outline-primary" size="lg">
               Submit
             </Button>
           </div>
         </div>
       </form>
-      <div style={{ height: "50px;", marginBottom: 150 }}></div>
+      <div style={{ height: "50px;", marginBottom: 5 }}></div>
     </>
   );
 };
