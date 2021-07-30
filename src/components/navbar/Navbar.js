@@ -27,7 +27,7 @@ const Navbar = () => {
         </div>
         <div className={styles.right_nev}>
           <p className={styles.right_nev_text}>
-            follow us&nbsp;
+            <p className={styles.follow_p}>follow us&nbsp; </p>
             <a href="https://www.facebook.com/spicevillageofficial/">
               <SiFacebook className={styles.right_icons} />
             </a>

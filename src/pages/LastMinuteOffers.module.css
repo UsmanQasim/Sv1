@@ -11,14 +11,19 @@ form {
   margin-right: auto;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   height: auto;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 100px;
+}
 .sections {
   display: flex;
   width: 100%;
-  max-width: 1000px;
   justify-content: space-between;
   align-items: center;
 }
@@ -67,4 +72,13 @@ input {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  form {
+    max-width: 600px;
+  }
+  .sections {
+    max-width: 600px;
+  }
 }
