@@ -31,6 +31,7 @@ const Navbar = () => {
             <a
               href="https://www.facebook.com/spicevillageofficial/"
               target="_blank"
+              rel="Facebook"
             >
               <SiFacebook className={styles.right_icons} />
             </a>
@@ -38,11 +39,12 @@ const Navbar = () => {
             <a
               href="https://www.instagram.com/spicevillageevents/"
               target="_blank"
+              rel="Instagram"
             >
               <AiOutlineInstagram className={styles.right_icons} />
             </a>
             &nbsp;
-            {/* <Sidemenu /> */}
+            <Sidemenu />
           </p>
         </div>
       </div>

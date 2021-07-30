@@ -12,7 +12,7 @@ const Sidemenu = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#9d915d" }}>
-        <div className="navbar" style={{ zIndex: "10000" }}>
+        <div className="navbar">
           <Link to="#" className="menu-bars">
             <GiHamburgerMenu className="icon-style" onClick={showSidebar} />
           </Link>

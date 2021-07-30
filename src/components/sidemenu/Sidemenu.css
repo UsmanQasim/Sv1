@@ -3,6 +3,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 50;
 }
 .menu-bar {
   margin-left: 2rem;
