@@ -1,8 +1,10 @@
 import React from "react";
 import style from "../pages/Main.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Coursal from "../pages/Coursal";
 import Carousel from "react-bootstrap/Carousel";
+import Slider from "react-slick";
+import "../../node_modules/slick-carousel/slick/slick.css";
+import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg";
 import img2 from "../GalleryPhotos/garden-room-at-syon-park.jpg";
 import img3 from "../GalleryPhotos/The-Walled-Garden-At-Syon.jpg";
@@ -18,6 +20,41 @@ import small6 from "../GalleryPhotos/sponsor slides/hmc-min.png";
 import small7 from "../GalleryPhotos/sponsor slides/hsqc-min.png";
 import small8 from "../GalleryPhotos/sponsor slides/ISO-9001-min.png";
 import small9 from "../GalleryPhotos/sponsor slides/qms-min.png";
+
+const settings = {
+  dots: true,
+  infinite: true,
+  autoplay: true,
+  autoplayspeed: 500,
+  slidesToShow: 4,
+  arrows: true,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 const Main = () => {
   return (
@@ -179,7 +216,7 @@ const Main = () => {
                 src={lastmin}
                 class="figure-img img-fluid rounded"
                 alt="Pakistan Weddings"
-                className={style.imgleft}
+                className={style.imgright}
               />
             </figure>
           </div>
@@ -207,6 +244,7 @@ const Main = () => {
             </div>
           </div>
         </div>
+
         <section className={style.catering_section}>
           <div className={style.container}>
             <h1 className={style.container_text_h1}>Catering</h1>
@@ -232,21 +270,9 @@ const Main = () => {
         </section>
 
         <div>
-          <Coursal
-            show={4}
-            infiniteLoop={true}
-            autoplayInterval={3}
-            autoplay
-            // loop
-          >
-            <div>
-              <div style={{ padding: 8 }} className={style.sliderDiv}>
-                <img
-                  src={small1}
-                  alt="placeholder"
-                  className={style.sliderImg}
-                />
-              </div>
+          <Slider {...settings}>
+            <div style={{ padding: 8 }} className={style.sliderDiv}>
+              <img src={small1} alt="placeholder" className={style.sliderImg} />
             </div>
             <div>
               <div style={{ padding: 8 }} className={style.sliderDiv}>
@@ -288,7 +314,7 @@ const Main = () => {
                 <img src={small9} alt="placeholder" />
               </div>
             </div>
-          </Coursal>
+          </Slider>
         </div>
       </div>
     </>

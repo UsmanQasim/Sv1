@@ -66,3 +66,9 @@
   align-items: center;
   margin-bottom: 30px;
 }
+
+@media (max-width: 480px) {
+  .container .links {
+    font-size: 9px;
+  }
+}

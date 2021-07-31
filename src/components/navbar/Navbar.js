@@ -30,7 +30,7 @@ const Navbar = () => {
             <p className={styles.follow_p}>follow us&nbsp; </p>
             <a
               href="https://www.facebook.com/spicevillageofficial/"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <SiFacebook className={styles.right_icons} />
@@ -38,7 +38,7 @@ const Navbar = () => {
             &nbsp;
             <a
               href="https://www.instagram.com/spicevillageevents/"
-              rel="noreferrer"
+              rel="noreferrer noopener"
               target="_blank"
             >
               <AiOutlineInstagram className={styles.right_icons} />
