@@ -443,6 +443,44 @@ p {
   }
 }
 
+@media (max-width: 640px) {
+  .section_4_left_div {
+    overflow: hidden;
+  }
+  .section_5_left_div {
+    overflow: hidden;
+  }
+  .strip_container {
+    margin-left: 0;
+  }
+  .pr {
+    font-size: 13px;
+  }
+  .callpr {
+    font-size: 14px;
+    word-break: break-all;
+  }
+  .catering_section .container {
+    padding-bottom: 370px;
+  }
+  .container_text_h1 {
+    font-size: 55px;
+  }
+  .container_text_p {
+    font-size: 25px;
+  }
+  .golhead h2 {
+    font-size: 35px;
+  }
+  .exppra {
+    font-size: 1.1rem;
+    padding-top: 10px;
+  }
+  .floating_goldbar h2 {
+    line-height: 2.7rem;
+  }
+}
+
 @media (max-width: 400px) {
   .section_4_left_div {
     overflow: hidden;
