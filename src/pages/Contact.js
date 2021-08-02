@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import style from "../pages/Contact.module.css";
 
 const Contact = () => {
-  const [onChange] = useState(new Date());
-
   return (
     <>
       <section className={style.contact_section_1}>
@@ -81,10 +79,7 @@ const Contact = () => {
               </div>
             </div>
             <div>
-              <ReCAPTCHA
-                sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt"
-                onChange={onChange}
-              />
+              <ReCAPTCHA sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt" />
             </div>
             <div>
               <button type="submit" className={style.submitbtn}>

@@ -50,8 +50,7 @@ label {
   padding: 7px 0px 0px 0px;
 }
 input {
-  border: 1;
-  border-color: rgb(196, 194, 194);
+  border: 1px solid lightgray;
   height: 40px;
   border-radius: 5px;
   text-align: center;

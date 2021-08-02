@@ -2,6 +2,27 @@ import React from "react";
 import style from "../pages/LastMinuteOffers.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
+import Select from "react-select";
+
+const options = [
+  { value: "Wedding", label: "Wedding" },
+  { value: "Corporate", label: "Corporate" },
+  { value: "PrivateParties", label: "PrivateParties" },
+  { value: "CharityDinner", label: "CharityDinner" },
+  { value: "PrivateParties", label: "PrivateParties" },
+  { value: "AwardsNight", label: "AwardsNight" },
+  { value: "GalaDinner", label: "GalaDinner" },
+];
+
+const second_options = [
+  { value: "Internet Search", label: "Internet Search" },
+  { value: "Advertisment", label: "Advertisment" },
+  { value: "Friend", label: "Friend" },
+  { value: "News", label: "News" },
+  { value: "SocialMedia", label: "SocialMedia" },
+  { value: "Frequent Customer", label: "Frequent Customer" },
+  { value: "Other", label: "Other" },
+];
 
 function onChange(value) {
   console.log("Captcha value:", value);
@@ -101,7 +122,11 @@ const LastMinuteOffers = () => {
               <label>Preffered Date of Event</label>
             </div>
             <div className={style.nameinput}>
-              <input type="date" className={style.inputs} />
+              <input
+                type="date"
+                className={style.inputs}
+                value="Preferred date"
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -155,17 +180,7 @@ const LastMinuteOffers = () => {
               <label>Type Of Event</label>
             </div>
             <div className={style.nameinput}>
-              <select className={style.inputs} placeholder="Type Of Event">
-                <option value="*" selected disabled>
-                  Type Of Event
-                </option>
-                <option value="Wedding">Wedding</option>
-                <option value="Corporate">Corporate</option>
-                <option value="PrivateParties">Private Parties</option>
-                <option value="CharityDinner">Charity Dinner</option>
-                <option value="AwardsNight">Awards Night</option>
-                <option value="GalaDinner">Gala Dinner</option>
-              </select>
+              <Select options={options} className={style.inputs} />
             </div>
           </div>
           <div className={style.sections}>
@@ -197,18 +212,7 @@ const LastMinuteOffers = () => {
               <label>How did You Here About us</label>
             </div>
             <div className={style.nameinput}>
-              <select className={style.inputs}>
-                <option value="*" selected disabled>
-                  Tell Us
-                </option>
-                <option value="Internet Search">Internet Search</option>
-                <option value="Advertisment">Advertisment</option>
-                <option value="Friend">Friend</option>
-                <option value="News">News</option>
-                <option value="SocialMedia">SocialMedia</option>
-                <option value="Frequent Customer">Frequent Customer</option>
-                <option value="Other">Other</option>
-              </select>
+              <Select options={second_options} className={style.inputs} />
             </div>
           </div>
           <div className={style.recap}>

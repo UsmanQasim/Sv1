@@ -27,8 +27,8 @@ const settings = {
   autoplay: true,
   autoplayspeed: 500,
   slidesToShow: 4,
-  arrows: true,
   slidesToScroll: 1,
+  arrows: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -269,7 +269,7 @@ const Main = () => {
           </div>
         </section>
 
-        <div>
+        <div className={style.slidercontainer}>
           <Slider {...settings}>
             <div style={{ padding: 8 }} className={style.sliderDiv}>
               <img src={small1} alt="placeholder" className={style.sliderImg} />
