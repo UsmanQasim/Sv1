@@ -19,9 +19,6 @@ const footer = () => {
             Terms and Conditions
           </Link>
           <Link to="#" className={styles.links}>
-            Find us
-          </Link>
-          <Link to="#" className={styles.links}>
             {" "}
             Covid-19 Updates
           </Link>

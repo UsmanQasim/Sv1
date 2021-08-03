@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../pages/LastMinuteOffers.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
 import Select from "react-select";
+
+import Axios from "axios";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -24,11 +26,96 @@ const second_options = [
   { value: "Other", label: "Other" },
 ];
 
-function onChange(value) {
-  console.log("Captcha value:", value);
-}
+const checkbox1 = [
+  "Wedding Package",
+  " Entertainer",
+  "Decor",
+  "Wedding Cake",
+  "Wedding Vanue",
+  "Photographer",
+  "Caterer",
+];
+
+const checkbox2 = [
+  "Close",
+  "Less than 5 miles",
+  "I don't Care",
+  " Within 2 Hours",
+];
 
 const LastMinuteOffers = () => {
+  const [gender, setGender] = useState("mr");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [packages, setPackages] = useState([]);
+  const [pcode, setPcode] = useState(0);
+  const [eventdate, setEventdate] = useState("11/01/2012");
+  const [vanuetobe, setVenuetobe] = useState([]);
+  const [totalguests, setTotalGuest] = useState("60");
+  const [Eventtype, setEventtype] = useState("");
+  const [email, setEmail] = useState("");
+  const [phno, setPhoneno] = useState("");
+  const [comment, setComment] = useState("");
+  const [howuknow, setHowuKnow] = useState("");
+  const [captchaSubmitted, setCaptchaSubmitted] = useState(false);
+
+  const onChange = (value) => {
+    setCaptchaSubmitted(value);
+  };
+
+  const packageChangeHandler = (checked, value) => {
+    if (checked && !packages.includes(value)) {
+      setPackages([...packages, value]);
+      console.log("Inserting");
+    } else {
+      setPackages(packages.filter((p) => (p === value ? false : true)));
+      console.log("Removing");
+    }
+  };
+
+  const venueChangeHandler = (checked, value) => {
+    if (checked && !vanuetobe.includes(value)) {
+      setVenuetobe([...vanuetobe, value]);
+      console.log("Inserting");
+    } else {
+      setVenuetobe(vanuetobe.filter((p) => (p === value ? false : true)));
+      console.log("Removing");
+    }
+  };
+
+  const submitHandler = () => {
+    let packages_str = "";
+    packages.map((p) => (packages_str += `${p},`));
+
+    let venue_str = "";
+    vanuetobe.map((v) => (venue_str += `${v},`));
+
+    console.log("Packages: " + packages_str);
+    console.log("Venue To Be: " + venue_str);
+
+    const reqURL = "http://localhost/sv1_be/insertInquiry.php";
+
+    const formData = {
+      firstName: fname,
+      lastName: lname,
+      gender: gender,
+      packages: packages_str,
+      postCode: pcode,
+      eventDate: eventdate,
+      venueToBe: vanuetobe,
+      totalGuests: totalguests,
+      eventType: Eventtype,
+      email: email,
+      phone: phno,
+      comment: comment,
+      howYouKnow: howuknow,
+    };
+
+    Axios.post(reqURL, formData)
+      .then((res) => console.log(res.data))
+      .catch((error) => console.log(error.message));
+  };
+
   return (
     <>
       <form>
@@ -37,7 +124,10 @@ const LastMinuteOffers = () => {
             <div className={style.labelinput}>
               <label>I AM</label>
             </div>
-            <div className={style.nameinput}>
+            <div
+              className={style.nameinput}
+              onChange={(e) => setGender(e.target.value)}
+            >
               <input type="radio" name="user" />
               <label>&nbsp;Mr. &nbsp; &nbsp;</label>
               <input type="radio" name="user" />
@@ -49,7 +139,12 @@ const LastMinuteOffers = () => {
               <label>My First Name</label>
             </div>
             <div className={style.nameinput}>
-              <input type="text" className={style.inputs} />
+              <input
+                type="text"
+                value={fname}
+                onChange={(e) => setFname(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -57,7 +152,12 @@ const LastMinuteOffers = () => {
               <label>My Last Name</label>
             </div>
             <div className={style.nameinput}>
-              <input type="text" className={style.inputs} />
+              <input
+                type="text"
+                value={lname}
+                onChange={(e) => setLname(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -73,48 +173,49 @@ const LastMinuteOffers = () => {
               }}
               className={style.nameinput}
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Wedding Package &nbsp; &nbsp;
-                </label>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Wedding Vanue{" "}
-                </label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Entertainer &#8195;&#8195;&#8199;&#8199;&#8199;
-                </label>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Photographer{" "}
-                </label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Decor &#8195;&#8199;&#8195;&#8195;&#8199;&#8195;&#8199;
-                </label>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>&nbsp;Caterer </label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Wedding Cake{" "}
-                </label>
+              <div
+                style={{ width: "500px", display: "flex", flexWrap: "wrap" }}
+              >
+                {checkbox1.map((item, key) => {
+                  return (
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        width: "100%",
+                        maxWidth: "169px",
+                      }}
+                      key={key}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={packages.includes(item) ? true : false}
+                        value={item}
+                        onChange={(e) =>
+                          packageChangeHandler(e.target.checked, e.target.value)
+                        }
+                      />
+                      <label className={style.labelcheckbox}>
+                        &nbsp; {item}
+                      </label>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
+
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>Postal Code</label>
             </div>
             <div className={style.nameinput}>
-              <input type="text" className={style.inputs} />
+              <input
+                type="text"
+                value={pcode}
+                onChange={(e) => setPcode(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -124,15 +225,18 @@ const LastMinuteOffers = () => {
             <div className={style.nameinput}>
               <input
                 type="date"
+                value={eventdate}
+                onChange={(e) => setEventdate(e.target.value)}
                 className={style.inputs}
-                value="Preferred date"
               />
             </div>
           </div>
+
           <div className={style.sections}>
             <div className={style.labelinput} style={{ height: "170px" }}>
               <label>I Want My Event Venue To Be</label>
             </div>
+
             <div
               style={{
                 flexDirection: "column",
@@ -142,37 +246,43 @@ const LastMinuteOffers = () => {
               }}
               className={style.nameinput}
             >
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>&nbsp;Close</label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;Less than 5 miles
-                </label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  &nbsp;I don't Care
-                </label>
-              </div>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <input type="checkbox" />
-                <label className={style.labelcheckbox}>
-                  {" "}
-                  &nbsp;Within 2 Hours{" "}
-                </label>
-              </div>
+              {checkbox2.map((item, key) => {
+                return (
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      width: "100%",
+                      maxWidth: "169px",
+                    }}
+                    key={key}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={vanuetobe.includes(item) ? true : false}
+                      value={item}
+                      onChange={(e) =>
+                        venueChangeHandler(e.target.checked, e.target.value)
+                      }
+                    />
+                    <label className={style.labelcheckbox}>&nbsp; {item}</label>
+                  </div>
+                );
+              })}
             </div>
           </div>
+
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>My Guest Count</label>
             </div>
             <div className={style.nameinput}>
-              <input type="number" className={style.inputs} />
+              <input
+                type="number"
+                value={totalguests}
+                onChange={(e) => setTotalGuest(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -180,7 +290,11 @@ const LastMinuteOffers = () => {
               <label>Type Of Event</label>
             </div>
             <div className={style.nameinput}>
-              <Select options={options} className={style.inputs} />
+              <Select
+                options={options}
+                onChange={(e) => setEventtype(e.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -188,7 +302,12 @@ const LastMinuteOffers = () => {
               <label>My Email Address</label>
             </div>
             <div className={style.nameinput}>
-              <input type="email" className={style.inputs} />
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -196,7 +315,12 @@ const LastMinuteOffers = () => {
               <label>My Phone Number</label>
             </div>
             <div className={style.nameinput}>
-              <input type="number" className={style.inputs} />
+              <input
+                type="number"
+                value={phno}
+                onChange={(e) => setPhoneno(e.target.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.sections}>
@@ -204,7 +328,13 @@ const LastMinuteOffers = () => {
               <label>My Comments</label>
             </div>
             <div className={style.nameinput}>
-              <input type="text" className={style.inputs} height="200px" />
+              <textarea
+                type="text"
+                value={comment}
+                onChange={(e) => setComment(e.target.value)}
+                className={style.inputs}
+                height="200px"
+              ></textarea>
             </div>
           </div>
           <div className={style.sections}>
@@ -212,7 +342,11 @@ const LastMinuteOffers = () => {
               <label>How did You Here About us</label>
             </div>
             <div className={style.nameinput}>
-              <Select options={second_options} className={style.inputs} />
+              <Select
+                options={second_options}
+                onChange={(e) => setHowuKnow(e.value)}
+                className={style.inputs}
+              />
             </div>
           </div>
           <div className={style.recap}>
@@ -222,7 +356,12 @@ const LastMinuteOffers = () => {
             />
           </div>
           <div className={style.btnSubmit}>
-            <Button variant="outline-primary" size="lg">
+            <Button
+              variant="outline-primary"
+              size="lg"
+              onClick={submitHandler}
+              disabled={captchaSubmitted ? false : true}
+            >
               Submit
             </Button>
           </div>

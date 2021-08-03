@@ -151,9 +151,8 @@ const Main = () => {
             <figure className={style.figure}>
               <img
                 src={pakwed}
-                class="figure-img img-fluid rounded"
-                alt="Pakistan Weddings"
                 className={style.imgleft}
+                alt="Pakistan Weddings"
               />
             </figure>
           </div>
@@ -214,7 +213,6 @@ const Main = () => {
             <figure className={style.figure}>
               <img
                 src={lastmin}
-                class="figure-img img-fluid rounded"
                 alt="Pakistan Weddings"
                 className={style.imgright}
               />

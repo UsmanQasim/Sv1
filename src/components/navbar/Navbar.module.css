@@ -12,7 +12,6 @@
   top: 0;
   height: 90px;
   width: 100%;
-  max-width: 1300px;
   margin-bottom: 5px;
   margin-top: 5px;
   z-index: 15;
@@ -161,7 +160,7 @@
 
 @media (max-width: 980px) {
   .container {
-    max-width: 980px;
+    max-width: 100%;
   }
 
   .left_nev_text {
@@ -194,11 +193,37 @@
   .linkbtn {
     font-size: 0.8rem;
   }
+  .follow_p {
+    display: none;
+  }
+  .center_nev {
+    padding-right: 0px;
+    width: 30%;
+  }
+  .right_icons {
+    font-size: 35px;
+  }
+  .logoimg {
+    height: 80px;
+  }
 }
 
 @media (max-width: 680px) {
   .linkbtn {
     font-size: 11px;
+  }
+  .logoimg {
+    height: 65px;
+  }
+  .left_nev {
+    width: 30%;
+    padding-left: 10px;
+  }
+  .left_nev_text {
+    padding-left: 1px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    margin: 0;
   }
 }
 @media (max-width: 580px) {
@@ -207,21 +232,40 @@
   }
 }
 
-@media (max-width: 483px) {
-  .links {
-    max-width: 100%;
-  }
-  .linkbtn {
-    padding: 0px;
-    line-height: 5px;
-    font-size: 7.9px;
-  }
-}
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .linkscontainer {
     display: none;
   }
-  .linkbtn {
-    font-size: 4px;
+  .left_nev {
+    width: 40%;
+    padding-left: 2px;
+  }
+  .left_nev_text {
+    padding-left: 1px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    margin: 0;
+  }
+  .center_nev {
+    padding-right: 0px;
+    width: 30%;
+  }
+  .logoimg {
+    height: 65px;
+  }
+
+  .right_nev {
+    width: 30%;
+  }
+  .follow_p {
+    display: none;
+  }
+  .right_icons {
+    font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .left_nev_text {
+    font-size: 12px;
   }
 }

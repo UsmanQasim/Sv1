@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
 
 .coursal_container {
@@ -110,7 +112,6 @@ p {
   color: #3b3f3f;
   text-align: justify;
   font-size: 15px;
-  font-family: Merriweather, serif;
 }
 .paragraph {
   max-width: 940px;
@@ -118,6 +119,10 @@ p {
   color: #3b3f3f;
   font-weight: 500;
   font-size: large;
+}
+.paragraph p {
+  font-family: Merriweather, serif;
+  line-height: 1.8rem;
 }
 
 /* Section 4 */
@@ -150,6 +155,7 @@ p {
   font-size: larger;
   letter-spacing: 1.2px;
   font-weight: 800;
+  width: 100%;
   text-transform: uppercase;
 }
 .headertitle {
@@ -170,7 +176,7 @@ p {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding: 24px 24px 24px 24px;
+  padding: 5px 24px 24px 24px;
 }
 /**/
 .section_5 {
@@ -199,6 +205,7 @@ p {
 }
 .text_section_5_head {
   font-size: larger;
+  width: 100%;
   letter-spacing: 1.2px;
   font-weight: 800;
   text-transform: uppercase;
@@ -390,35 +397,60 @@ p {
   left: 0;
   right: 0;
 }
-
-/**/
+.slidercontainer {
+  margin-top: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sliderImg {
+  display: block;
+}
 .sliderDiv {
   display: flex;
+  width: 90%;
   justify-content: center;
   align-items: center;
 }
-.slidercontainer {
-  width: 100%;
-}
+/**/
 
 /*  */
 
-.pakistanwed_section {
-  width: 100%;
-  height: 100vh;
-  background-color: gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
+/*Media Queary*/
+@media (min-width: 1200px) {
+  .section_4_left_div {
+    width: 59%;
+  }
 }
 
-/*Media Queary*/
-@media (max-width: 1170px) {
+@media (max-width: 1190px) {
   .section_4_left_div {
     width: 60%;
+  }
+  .section_4 {
+    flex-direction: column;
+  }
+  .section_4_left_div {
+    width: 100%;
+  }
+  .imgleft {
+    object-fit: cover;
+  }
+  .section_4_right_div {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .section_5 {
+    flex-direction: column-reverse;
+  }
+  .section_5_left_div {
+    width: 100%;
+  }
+  .section_5_right_div {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -483,7 +515,7 @@ p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .section_4_left_div {
     overflow: hidden;
   }
@@ -518,5 +550,26 @@ p {
   }
   .floating_goldbar h2 {
     line-height: 2.7rem;
+  }
+  .text {
+    font-size: 28px;
+  }
+  .textby {
+    font-size: 20px;
+  }
+  .smallicon {
+    height: 60px;
+  }
+  .strip_left_text {
+    margin-left: 12px;
+  }
+  .container_text_p {
+    font-size: 18px;
+  }
+  .golhead {
+    font-size: 35px;
+  }
+  .exppra {
+    font-size: 15px;
   }
 }

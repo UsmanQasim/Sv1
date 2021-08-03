@@ -1,6 +1,17 @@
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import Select from "react-select";
 import style from "../pages/Contact.module.css";
+
+const options = [
+  { value: "Wedding", label: "Wedding" },
+  { value: "Corporate", label: "Corporate" },
+  { value: "PrivateParties", label: "PrivateParties" },
+  { value: "CharityDinner", label: "CharityDinner" },
+  { value: "PrivateParties", label: "PrivateParties" },
+  { value: "AwardsNight", label: "AwardsNight" },
+  { value: "GalaDinner", label: "GalaDinner" },
+];
 
 const Contact = () => {
   return (
@@ -11,6 +22,7 @@ const Contact = () => {
             <div className={style.banner_content_header}>
               <p className={style.text}>Contact us today</p>
             </div>
+
             <div className={style.banner_content_inputs}>
               <input
                 className={style.inputs}
@@ -35,22 +47,14 @@ const Contact = () => {
               <input
                 className={style.inputs}
                 placeholder="Prefered Date Of Event"
-                type="text"
-                onfocus="(this.type = 'date')"
+                type="date"
                 id="date"
               />
-
-              <select className={style.inputs} placeholder="Type Of Event">
-                <option value="*" selected disabled>
-                  Type Of Event
-                </option>
-                <option value="Wedding">Wedding</option>
-                <option value="Corporate">Corporate</option>
-                <option value="PrivateParties">Private Parties</option>
-                <option value="CharityDinner">Charity Dinner</option>
-                <option value="AwardsNight">Awards Night</option>
-                <option value="GalaDinner">Gala Dinner</option>
-              </select>
+              <Select
+                options={options}
+                className={style.inputs}
+                placeholder="Type Of Event"
+              />
               <input
                 className={style.inputs}
                 type="text"

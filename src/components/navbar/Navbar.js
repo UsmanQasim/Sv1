@@ -44,7 +44,7 @@ const Navbar = () => {
               <AiOutlineInstagram className={styles.right_icons} />
             </a>
             &nbsp;
-            <Sidemenu />
+            <Sidemenu className={styles.right_icons} />
           </p>
         </div>
       </div>

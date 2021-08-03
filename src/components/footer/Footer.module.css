@@ -66,8 +66,21 @@
   align-items: center;
   margin-bottom: 30px;
 }
+@media (max-width: 770px) {
+  .container.links {
+    font-size: 20px;
+  }
+}
+@media (max-width: 540px) {
+  .container .links {
+    font-size: 13px;
+  }
+}
 
 @media (max-width: 480px) {
+  .bottomLine p {
+    font-size: 13px;
+  }
   .container .links {
     font-size: 9px;
   }
