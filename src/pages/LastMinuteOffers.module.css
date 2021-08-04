@@ -59,7 +59,12 @@ input {
   width: 300px;
   font-family: Merriweather, serif;
 }
-
+.packages_contianed {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 169px;
+}
 .nameinput {
   margin-top: 2px;
   font-family: Merriweather, serif;
@@ -101,6 +106,12 @@ input {
     padding-left: 20px;
   }
 }
+@media only screen and (max-width: 460px) {
+  .labelcheckbox {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+}
 @media only screen and (max-width: 430px) {
   .container {
     max-width: 100%;
@@ -116,6 +127,9 @@ input {
   .nameinput {
     width: 68%;
   }
+  .packages_contianed {
+    max-width: 134px;
+  }
 }
 @media only screen and (max-width: 380px) {
   .container {
@@ -124,14 +138,18 @@ input {
     margin-right: 10px;
     font-size: 12px;
   }
+
   .labelinput {
     font-size: 12px;
   }
   .labelcheckbox {
-    font-size: 12px;
-    padding-top: 12px;
+    font-size: 8px;
+    padding-top: 15px;
   }
   .nameinput {
     width: 70%;
+  }
+  .packages_contianed {
+    max-width: 134px;
   }
 }

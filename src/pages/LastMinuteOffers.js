@@ -170,23 +170,21 @@ const LastMinuteOffers = () => {
                 height: "170px",
                 justifyContent: "center",
                 alignItems: "flex-start",
+                overflowX: "hidden",
               }}
               className={style.nameinput}
             >
               <div
-                style={{ width: "500px", display: "flex", flexWrap: "wrap" }}
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  height: "170px",
+                  width: "400px",
+                }}
               >
                 {checkbox1.map((item, key) => {
                   return (
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        width: "100%",
-                        maxWidth: "169px",
-                      }}
-                      key={key}
-                    >
+                    <div className={style.packages_contianed} key={key}>
                       <input
                         type="checkbox"
                         checked={packages.includes(item) ? true : false}

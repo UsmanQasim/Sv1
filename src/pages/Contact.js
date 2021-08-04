@@ -19,11 +19,10 @@ const Contact = () => {
       <section className={style.contact_section_1}>
         <div className={style.banner_inner}>
           <div className={style.banner_content}>
-            <div className={style.banner_content_header}>
-              <p className={style.text}>Contact us today</p>
-            </div>
-
             <div className={style.banner_content_inputs}>
+              <div>
+                <p className={style.text}>Contact us today</p>
+              </div>
               <input
                 className={style.inputs}
                 type="text"
@@ -47,14 +46,24 @@ const Contact = () => {
               <input
                 className={style.inputs}
                 placeholder="Prefered Date Of Event"
-                type="date"
+                type="text"
+                onfocus="(this.type = 'date')"
                 id="date"
               />
-              <Select
-                options={options}
-                className={style.inputs}
-                placeholder="Type Of Event"
-              />
+              <div className={style.nameinput}>
+                <Select options={options} className={style.Select_input} />
+              </div>
+              {/* <select className={style.inputs} placeholder="Type Of Event">
+                <option value="*" selected disabled>
+                  Type Of Event
+                </option>
+                <option value="Wedding">Wedding</option>
+                <option value="Corporate">Corporate</option>
+                <option value="PrivateParties">Private Parties</option>
+                <option value="CharityDinner">Charity Dinner</option>
+                <option value="AwardsNight">Awards Night</option>
+                <option value="GalaDinner">Gala Dinner</option>
+              </select> */}
               <input
                 className={style.inputs}
                 type="text"
@@ -81,14 +90,14 @@ const Contact = () => {
                   Conditions and Privacy Notice.
                 </p>
               </div>
-            </div>
-            <div>
-              <ReCAPTCHA sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt" />
-            </div>
-            <div>
-              <button type="submit" className={style.submitbtn}>
-                SUBMIT
-              </button>
+              <div>
+                <ReCAPTCHA sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt" />
+              </div>
+              <div>
+                <button type="submit" className={style.submitbtn}>
+                  SUBMIT
+                </button>
+              </div>
             </div>
           </div>
         </div>

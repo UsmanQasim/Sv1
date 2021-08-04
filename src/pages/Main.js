@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "../pages/Main.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
@@ -261,7 +262,14 @@ const Main = () => {
                 design a bespoke menu for your unforgettable event.
               </p>
               <div className={style.btnwrap}>
-                <button className={style.btn_exp}>View Our Menu </button>
+                <Link
+                  to="/download/SV_menu.pdf"
+                  target="_blank"
+                  download
+                  style={{ fontDecoration: "none" }}
+                >
+                  <button className={style.btn_exp}>View Our Menu </button>
+                </Link>
               </div>
             </div>
           </div>

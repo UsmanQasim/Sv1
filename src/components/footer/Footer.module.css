@@ -67,8 +67,8 @@
   margin-bottom: 30px;
 }
 @media (max-width: 770px) {
-  .container.links {
-    font-size: 20px;
+  .container .links {
+    font-size: 16px;
   }
 }
 @media (max-width: 540px) {
