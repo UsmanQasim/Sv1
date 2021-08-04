@@ -11,6 +11,7 @@ import Nav from "../navbar/Navbar";
 import Gallery from "../../pages/Gallery";
 import Contact from "../../pages/Contact";
 import LastMinuteOffers from "../../pages/LastMinuteOffers";
+import Covid from "../../pages/Covid";
 import pageNotFound from "../../pages/PageNotFound";
 import Footer from "../footer/Footer";
 
@@ -27,6 +28,7 @@ const RouteHandler = () => {
               <Route path="/about" component={About} exact />
               <Route path="/gallery" component={Gallery} exact />
               <Route path="/contact" component={Contact} exact />
+              <Route path="/covid" component={Covid} exact />
               <Route
                 path="/lastminuteoffers"
                 component={LastMinuteOffers}

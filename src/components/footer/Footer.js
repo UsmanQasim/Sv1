@@ -15,10 +15,10 @@ const footer = () => {
           <hr />
         </Container>
         <Container className={styles.container}>
-          <Link to="#" className={styles.links}>
+          <Link to="/covid" className={styles.links}>
             Terms and Conditions
           </Link>
-          <Link to="#" className={styles.links}>
+          <Link to="/covid" className={styles.links}>
             {" "}
             Covid-19 Updates
           </Link>
