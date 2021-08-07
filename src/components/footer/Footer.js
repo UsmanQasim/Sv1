@@ -15,7 +15,7 @@ const footer = () => {
           <hr />
         </Container>
         <Container className={styles.container}>
-          <Link to="/covid" className={styles.links}>
+          <Link to="/termsandcondition" className={styles.links}>
             Terms and Conditions
           </Link>
           <Link to="/covid" className={styles.links}>

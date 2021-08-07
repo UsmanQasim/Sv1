@@ -1,8 +1,10 @@
 import React from "react";
 import smalllogo from "../sv-logo.svg";
 import style from "./About.module.css";
-import small1 from "../GalleryPhotos/sponsor slides/clifton.png";
-import small2 from "../GalleryPhotos/sponsor slides/csc-min.png";
+import small3 from "../GalleryPhotos/About Slider/AfraAward1.png";
+import small4 from "../GalleryPhotos/About Slider/asiancurryawards.png";
+import small5 from "../GalleryPhotos/About Slider/british-curry-awards_1.jpg";
+import small6 from "../GalleryPhotos/About Slider/Evening-Standard.png";
 import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
@@ -113,16 +115,16 @@ const About = () => {
       <div className={style.slidercontainer}>
         <Slider {...settings}>
           <div style={{ padding: 8 }} className={style.sliderDiv}>
-            <img src={small1} alt="placeholder" className={style.sliderImg} />
+            <img src={small3} alt="placeholder" className={style.sliderImg} />
           </div>
           <div style={{ padding: 8 }} className={style.sliderDiv}>
-            <img src={small2} alt="placeholder" className={style.sliderImg} />
+            <img src={small4} alt="placeholder" className={style.sliderImg} />
           </div>
           <div style={{ padding: 8 }} className={style.sliderDiv}>
-            <img src={small1} alt="placeholder" className={style.sliderImg} />
+            <img src={small5} alt="placeholder" className={style.sliderImg} />
           </div>
           <div style={{ padding: 8 }} className={style.sliderDiv}>
-            <img src={small2} alt="placeholder" className={style.sliderImg} />
+            <img src={small6} alt="placeholder" className={style.sliderImg} />
           </div>
         </Slider>
       </div>

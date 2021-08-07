@@ -53,17 +53,6 @@ const Contact = () => {
               <div className={style.nameinput}>
                 <Select options={options} className={style.Select_input} />
               </div>
-              {/* <select className={style.inputs} placeholder="Type Of Event">
-                <option value="*" selected disabled>
-                  Type Of Event
-                </option>
-                <option value="Wedding">Wedding</option>
-                <option value="Corporate">Corporate</option>
-                <option value="PrivateParties">Private Parties</option>
-                <option value="CharityDinner">Charity Dinner</option>
-                <option value="AwardsNight">Awards Night</option>
-                <option value="GalaDinner">Gala Dinner</option>
-              </select> */}
               <input
                 className={style.inputs}
                 type="text"

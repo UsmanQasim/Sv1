@@ -59,7 +59,8 @@
   color: white;
   font-weight: 800;
 }
-.nav-meny-items {
+.nav-menu-items {
+  list-style: none;
   width: 100%;
 }
 
