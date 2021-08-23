@@ -3,13 +3,12 @@ import style from "../pages/LastMinuteOffers.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
 import Select from "react-select";
-
 import Axios from "axios";
+import { Modal } from "react-bootstrap";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
   { value: "Corporate", label: "Corporate" },
-  { value: "PrivateParties", label: "PrivateParties" },
   { value: "CharityDinner", label: "CharityDinner" },
   { value: "PrivateParties", label: "PrivateParties" },
   { value: "AwardsNight", label: "AwardsNight" },
@@ -44,6 +43,14 @@ const checkbox2 = [
 ];
 
 const LastMinuteOffers = () => {
+  // For Modal
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  // Ends
+
   const [gender, setGender] = useState("mr");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -93,9 +100,10 @@ const LastMinuteOffers = () => {
     console.log("Packages: " + packages_str);
     console.log("Venue To Be: " + venue_str);
 
-    const reqURL = "http://localhost/sv1_be/insertInquiry.php";
+    const reqURL = "http://backend.lastminuteweddings.uk/";
 
     const formData = {
+      _insertInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
       firstName: fname,
       lastName: lname,
       gender: gender,
@@ -122,7 +130,9 @@ const LastMinuteOffers = () => {
         <div className={style.container}>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>I AM</label>
+              <label>
+                I AM<spam> *</spam>
+              </label>
             </div>
             <div
               className={style.nameinput}
@@ -136,7 +146,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My First Name</label>
+              <label>
+                My First Name <spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -149,7 +161,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My Last Name</label>
+              <label>
+                My Last Name <spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -162,7 +176,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput} style={{ height: "170px" }}>
-              <label>I'm looking for</label>
+              <label>
+                I'm looking for <spam> *</spam>
+              </label>
             </div>
             <div
               style={{
@@ -205,11 +221,13 @@ const LastMinuteOffers = () => {
 
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>Postal Code</label>
+              <label>
+                Postal Code <spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
-                type="text"
+                type="number"
                 value={pcode}
                 onChange={(e) => setPcode(e.target.value)}
                 className={style.inputs}
@@ -218,7 +236,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>Preffered Date of Event</label>
+              <label>
+                Preffered Date of Event<spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -232,7 +252,9 @@ const LastMinuteOffers = () => {
 
           <div className={style.sections}>
             <div className={style.labelinput} style={{ height: "170px" }}>
-              <label>I Want My Event Venue To Be</label>
+              <label>
+                I Want My Event Venue To Be<spam> *</spam>
+              </label>
             </div>
 
             <div
@@ -272,7 +294,9 @@ const LastMinuteOffers = () => {
 
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My Guest Count</label>
+              <label>
+                My Guest Count <spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -285,7 +309,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>Type Of Event</label>
+              <label>
+                Type Of Event<spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <Select
@@ -297,7 +323,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My Email Address</label>
+              <label>
+                My Email Address<spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -310,7 +338,9 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My Phone Number</label>
+              <label>
+                My Phone Number<spam> *</spam>
+              </label>
             </div>
             <div className={style.nameinput}>
               <input
@@ -358,13 +388,27 @@ const LastMinuteOffers = () => {
               variant="outline-primary"
               size="lg"
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : true}
+              // onClick={handleShow}
+              disabled={captchaSubmitted ? false : false}
             >
               Submit
             </Button>
           </div>
         </div>
       </form>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Please Fill All Reuired (<spam>*</spam>) Fields
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            Ok
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <div style={{ height: "50px;", marginBottom: 5 }}></div>
     </>
   );

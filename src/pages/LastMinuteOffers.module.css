@@ -30,6 +30,9 @@ form {
 label {
   margin-bottom: 0;
 }
+spam{
+  color: red;
+}
 .labelinput {
   width: 30%;
   padding-top: 2px;
