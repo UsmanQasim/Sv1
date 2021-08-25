@@ -28,7 +28,7 @@ const Contact = () => {
   }, []);
 
   const submitHandler = () => {
-    const reqURL = "/contactInquiries/insert.php";
+    const reqURL = "/api/v1/contactInquiries/insert.php";
 
     const formData = {
       _insertContactInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",

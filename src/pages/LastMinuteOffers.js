@@ -101,7 +101,7 @@ const LastMinuteOffers = () => {
     console.log("Packages: " + packages_str);
     console.log("Venue To Be: " + venue_str);
 
-    const reqURL = "/inquiries/insert.php?api_key=" + API_KEY;
+    const reqURL = "/api/v1/inquiries/insert.php?api_key=" + API_KEY;
 
     const formData = {
       firstName: fname,
