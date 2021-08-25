@@ -3,7 +3,6 @@ import style from "../pages/LastMinuteOffers.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
 import Select from "react-select";
-import Axios from "axios";
 import { API_KEY } from "../utlis/secrets";
 import { Modal } from "react-bootstrap";
 
@@ -48,7 +47,6 @@ const LastMinuteOffers = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   // Ends
 
@@ -71,25 +69,15 @@ const LastMinuteOffers = () => {
     setCaptchaSubmitted(value);
   };
 
-  const packageChangeHandler = (checked, value) => {
-    if (checked && !packages.includes(value)) {
-      setPackages([...packages, value]);
-      console.log("Inserting");
-    } else {
-      setPackages(packages.filter((p) => (p === value ? false : true)));
-      console.log("Removing");
-    }
-  };
+  const packageChangeHandler = (checked, value) =>
+    checked && !packages.includes(value)
+      ? setPackages([...packages, value])
+      : setPackages(packages.filter((p) => (p === value ? false : true)));
 
-  const venueChangeHandler = (checked, value) => {
-    if (checked && !vanuetobe.includes(value)) {
-      setVenuetobe([...vanuetobe, value]);
-      console.log("Inserting");
-    } else {
-      setVenuetobe(vanuetobe.filter((p) => (p === value ? false : true)));
-      console.log("Removing");
-    }
-  };
+  const venueChangeHandler = (checked, value) =>
+    checked && !vanuetobe.includes(value)
+      ? setVenuetobe([...vanuetobe, value])
+      : setVenuetobe(vanuetobe.filter((p) => (p === value ? false : true)));
 
   const submitHandler = () => {
     let packages_str = "";
@@ -98,30 +86,37 @@ const LastMinuteOffers = () => {
     let venue_str = "";
     vanuetobe.map((v) => (venue_str += `${v},`));
 
-    console.log("Packages: " + packages_str);
-    console.log("Venue To Be: " + venue_str);
+    
+    // const formData = {
+    //   firstName: fname,
+    //   lastName: lname,
+    //   gender: gender,
+    //   packages: packages_str,
+    //   postCode: pcode,
+    //   eventDate: eventdate,
+    //   venueToBe: vanuetobe,
+    //   totalGuests: totalguests,
+    //   eventType: Eventtype,
+    //   email: email,
+    //   phone: phno,
+    //   comment: comment,
+    //   howYouKnow: howuknow,
+    // };
+    
+    const reqURL = "/v1/inquiries/insert.php?api_key=" + API_KEY;
 
-    const reqURL = "/api/v1/inquiries/insert.php?api_key=" + API_KEY;
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      console.log(this.responseText);
+    }
 
-    const formData = {
-      firstName: fname,
-      lastName: lname,
-      gender: gender,
-      packages: packages_str,
-      postCode: pcode,
-      eventDate: eventdate,
-      venueToBe: vanuetobe,
-      totalGuests: totalguests,
-      eventType: Eventtype,
-      email: email,
-      phone: phno,
-      comment: comment,
-      howYouKnow: howuknow,
-    };
+    const reqData = `firstName=${fname}&lastName=${lname}&gender=${gender}&packages=${packages_str}&postCode=${pcode}&eventDate=${eventdate}&venueToBe=${vanuetobe}&totalGuests=${totalguests}&eventType=${Eventtype}&email=${email}&phone=${phno}&comment=${comment}&howYouKnow=${howuknow}`;
 
-    Axios.post(reqURL, formData)
-      .then((res) => console.log(res.data))
-      .catch((error) => console.log(error.message));
+    xhttp.open("POST", reqURL);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(reqData);
+
+    // `firstName=${fname}&lastName=${lname}&gender=${gender}&packages=${packages_str}&postCode=${pcode}&eventDate=${eventdate}&venueToBe=${vanuetobe}&totalGuests=${totalguests}&eventType=${Eventtype}&email=${email}&phone=${phno}&comment=${comment}howYouKnow=${howuknow}`
   };
 
   return (
@@ -145,7 +140,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                My First Name <spam> *</spam>
+                My First Name <span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -160,7 +155,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                My Last Name <spam> *</spam>
+                My Last Name <span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -175,7 +170,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput} style={{ height: "170px" }}>
               <label>
-                I'm looking for <spam> *</spam>
+                I'm looking for <span> *</span>
               </label>
             </div>
             <div
@@ -220,7 +215,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                Postal Code <spam> *</spam>
+                Postal Code <span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -236,7 +231,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                Preffered Date of Event<spam> *</spam>
+                Preffered Date of Event<span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -252,7 +247,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput} style={{ height: "170px" }}>
               <label>
-                I Want My Event Venue To Be<spam> *</spam>
+                I Want My Event Venue To Be<span> *</span>
               </label>
             </div>
 
@@ -294,7 +289,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                My Guest Count <spam> *</spam>
+                My Guest Count <span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -310,7 +305,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                Type Of Event<spam> *</spam>
+                Type Of Event<span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -324,7 +319,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                My Email Address<spam> *</spam>
+                My Email Address<span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -339,7 +334,7 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                My Phone Number<spam> *</spam>
+                My Phone Number<span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
@@ -403,7 +398,7 @@ const LastMinuteOffers = () => {
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Please Fill All Reuired (<spam>*</spam>) Fields
+          Please Fill All Reuired (<span>*</span>) Fields
         </Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
@@ -411,7 +406,7 @@ const LastMinuteOffers = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-      <div style={{ height: "50px;", marginBottom: 5 }}></div>
+      <div style={{ height: "50px", marginBottom: 5 }}></div>
     </>
   );
 };

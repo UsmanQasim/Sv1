@@ -1,5 +1,5 @@
 import Axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
 import style from "../pages/Contact.module.css";
@@ -22,10 +22,6 @@ const Contact = () => {
   const [date, setDate] = useState("");
   const [eventType, setEventType] = useState("");
   const [venue, setVenue] = useState("");
-
-  useEffect(() => {
-    console.log(eventType);
-  }, []);
 
   const submitHandler = () => {
     const reqURL = "/api/v1/contactInquiries/insert.php";

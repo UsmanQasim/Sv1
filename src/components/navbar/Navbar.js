@@ -26,7 +26,7 @@ const Navbar = () => {
           <img src={logo} alt="little" className={styles.logoimg} />
         </div>
         <div className={styles.right_nev}>
-          <p className={styles.right_nev_text}>
+          <div className={styles.right_nev_text}>
             <p className={styles.follow_p}>follow us&nbsp; </p>
             <a
               href="https://www.facebook.com/spicevillageofficial/"
@@ -45,7 +45,7 @@ const Navbar = () => {
             </a>
             &nbsp;
             <Sidemenu className={styles.right_icons} />
-          </p>
+          </div>
         </div>
       </div>
       <div className={styles.linkscontainer}>
