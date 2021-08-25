@@ -4,6 +4,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
 import Select from "react-select";
 import Axios from "axios";
+import { API_KEY } from "../utlis/secrets";
 import { Modal } from "react-bootstrap";
 
 const options = [
@@ -100,10 +101,9 @@ const LastMinuteOffers = () => {
     console.log("Packages: " + packages_str);
     console.log("Venue To Be: " + venue_str);
 
-    const reqURL = "/inquiries/insert.php";
+    const reqURL = "/inquiries/insert.php?api_key=" + API_KEY;
 
     const formData = {
-      _insertInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
       firstName: fname,
       lastName: lname,
       gender: gender,
