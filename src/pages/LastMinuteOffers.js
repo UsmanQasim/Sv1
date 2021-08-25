@@ -38,9 +38,13 @@ const checkbox1 = [
 const checkbox2 = [
   "Close",
   "Less than 5 miles",
-  "I don't Care",
-  " Within 2 Hours",
+  "I Dont Care",
+  "Within 2 Hours",
 ];
+
+const GENDERS = [
+  "Mr", "Mrs"
+]
 
 const LastMinuteOffers = () => {
   // For Modal
@@ -50,13 +54,13 @@ const LastMinuteOffers = () => {
 
   // Ends
 
-  const [gender, setGender] = useState("mr");
+  const [gender, setGender] = useState(GENDERS[0]);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [packages, setPackages] = useState([]);
   const [pcode, setPcode] = useState(0);
-  const [eventdate, setEventdate] = useState("11/01/2012");
-  const [vanuetobe, setVenuetobe] = useState([]);
+  const [eventdate, setEventdate] = useState('');
+  const [vanuetobe, setVenuetobe] = useState(checkbox2[0]);
   const [totalguests, setTotalGuest] = useState("60");
   const [Eventtype, setEventtype] = useState("");
   const [email, setEmail] = useState("");
@@ -74,18 +78,9 @@ const LastMinuteOffers = () => {
       ? setPackages([...packages, value])
       : setPackages(packages.filter((p) => (p === value ? false : true)));
 
-  const venueChangeHandler = (checked, value) =>
-    checked && !vanuetobe.includes(value)
-      ? setVenuetobe([...vanuetobe, value])
-      : setVenuetobe(vanuetobe.filter((p) => (p === value ? false : true)));
-
   const submitHandler = () => {
     let packages_str = "";
     packages.map((p) => (packages_str += `${p},`));
-
-    let venue_str = "";
-    vanuetobe.map((v) => (venue_str += `${v},`));
-
     
     // const formData = {
     //   firstName: fname,
@@ -115,8 +110,6 @@ const LastMinuteOffers = () => {
     xhttp.open("POST", reqURL);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(reqData);
-
-    // `firstName=${fname}&lastName=${lname}&gender=${gender}&packages=${packages_str}&postCode=${pcode}&eventDate=${eventdate}&venueToBe=${vanuetobe}&totalGuests=${totalguests}&eventType=${Eventtype}&email=${email}&phone=${phno}&comment=${comment}howYouKnow=${howuknow}`
   };
 
   return (
@@ -127,14 +120,15 @@ const LastMinuteOffers = () => {
             <div className={style.labelinput}>
               <label>I Am</label>
             </div>
-            <div
-              className={style.nameinput}
-              onChange={(e) => setGender(e.target.value)}
-            >
-              <input type="radio" name="user" />
-              <label>&nbsp;Mr. &nbsp; &nbsp;</label>
-              <input type="radio" name="user" />
-              <label>&nbsp;Mrs.</label>
+            <div className={style.nameinput}>
+              {GENDERS.map((g, key) => {
+                return (
+                  <React.Fragment key={key}>
+                    <input type="radio" checked={gender === g} value={g} onChange={() => setGender(g)} />
+                    <label>&nbsp;{g}&nbsp; &nbsp;</label>
+                  </React.Fragment>
+                );
+              })}
             </div>
           </div>
           <div className={style.sections}>
@@ -273,11 +267,9 @@ const LastMinuteOffers = () => {
                   >
                     <input
                       type="checkbox"
-                      checked={vanuetobe.includes(item) ? true : false}
+                      checked={vanuetobe === item ? true : false}
                       value={item}
-                      onChange={(e) =>
-                        venueChangeHandler(e.target.checked, e.target.value)
-                      }
+                      onChange={() => setVenuetobe(item)}
                     />
                     <label className={style.labelcheckbox}>&nbsp; {item}</label>
                   </div>
@@ -285,7 +277,6 @@ const LastMinuteOffers = () => {
               })}
             </div>
           </div>
-
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
