@@ -100,7 +100,7 @@ const LastMinuteOffers = () => {
     console.log("Packages: " + packages_str);
     console.log("Venue To Be: " + venue_str);
 
-    const reqURL = "http://backend.lastminuteweddings.uk/";
+    const reqURL = "/inquiries/insert.php";
 
     const formData = {
       _insertInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
 import style from "../pages/Contact.module.css";
@@ -14,6 +14,51 @@ const options = [
 ];
 
 const Contact = () => {
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [numOfGuests, setNumOfGuests] = useState("");
+  const [date, setDate] = useState("");
+  const [eventType, setEventType] = useState("");
+
+  useEffect(() => {
+    console.log(eventType);
+  }, []);
+
+  const submitHandler = () => {
+    let packages_str = "";
+    packages.map((p) => (packages_str += `${p},`));
+
+    let venue_str = "";
+    vanuetobe.map((v) => (venue_str += `${v},`));
+
+    console.log("Packages: " + packages_str);
+    console.log("Venue To Be: " + venue_str);
+
+    const reqURL = "/contactInquiries/insert.php";
+
+    const formData = {
+      _insertInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
+      firstName: fname,
+      lastName: lname,
+      gender: gender,
+      packages: packages_str,
+      postCode: pcode,
+      eventDate: eventdate,
+      venueToBe: vanuetobe,
+      totalGuests: totalguests,
+      eventType: Eventtype,
+      email: email,
+      phone: phno,
+      comment: comment,
+      howYouKnow: howuknow,
+    };
+
+    Axios.post(reqURL, formData)
+      .then((res) => console.log(res.data))
+      .catch((error) => console.log(error.message));
+  };
+
   return (
     <>
       <section className={style.contact_section_1}>
@@ -25,33 +70,51 @@ const Contact = () => {
               </div>
               <input
                 className={style.inputs}
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
                 type="text"
                 placeholder="Full Name"
               />
               <input
                 className={style.inputs}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 type="number"
                 placeholder="Best Contact Number"
               />
               <input
                 className={style.inputs}
-                type="eamil"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
                 placeholder="Email Address"
               />
               <input
                 className={style.inputs}
-                type="number"
+                value={numOfGuests}
+                onChange={(e) => setNumOfGuests(e.target.value)}
+                min={0}
+                onFocus={(e) => (e.target.type = "number")}
+                onBlur={(e) => (e.target.type = "text")}
                 placeholder="Number Of Guests"
               />
               <input
                 className={style.inputs}
                 placeholder="Prefered Date Of Event"
                 type="text"
-                onfocus="(this.type = 'date')"
+                onFocus={(e) => (e.target.type = "date")}
+                onBlur={(e) => (e.target.type = "text")}
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
                 id="date"
               />
               <div className={style.nameinput}>
-                <Select options={options} className={style.Select_input} />
+                <Select
+                  options={options}
+                  className={style.Select_input}
+                  placeholder="Event Type"
+                  onChange={(e) => setEventType(e.value)}
+                />
               </div>
               <input
                 className={style.inputs}
@@ -83,7 +146,7 @@ const Contact = () => {
                 <ReCAPTCHA sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt" />
               </div>
               <div>
-                <button type="submit" className={style.submitbtn}>
+                <button type="submit" className={style.submitbtn} onClick={submitHandler}>
                   SUBMIT
                 </button>
               </div>
