@@ -130,9 +130,7 @@ const LastMinuteOffers = () => {
         <div className={style.container}>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>
-                I AM<spam> *</spam>
-              </label>
+              <label>I Am</label>
             </div>
             <div
               className={style.nameinput}
@@ -231,6 +229,7 @@ const LastMinuteOffers = () => {
                 value={pcode}
                 onChange={(e) => setPcode(e.target.value)}
                 className={style.inputs}
+                min={0}
               />
             </div>
           </div>
@@ -302,6 +301,7 @@ const LastMinuteOffers = () => {
               <input
                 type="number"
                 value={totalguests}
+                min={0}
                 onChange={(e) => setTotalGuest(e.target.value)}
                 className={style.inputs}
               />
@@ -345,6 +345,7 @@ const LastMinuteOffers = () => {
             <div className={style.nameinput}>
               <input
                 type="number"
+                min={0}
                 value={phno}
                 onChange={(e) => setPhoneno(e.target.value)}
                 className={style.inputs}
@@ -361,6 +362,7 @@ const LastMinuteOffers = () => {
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
                 className={style.inputs}
+                style={{ resize: "none", padding: "5px 10px" }}
                 height="200px"
               ></textarea>
             </div>

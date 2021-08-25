@@ -1,3 +1,4 @@
+import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
@@ -20,38 +21,23 @@ const Contact = () => {
   const [numOfGuests, setNumOfGuests] = useState("");
   const [date, setDate] = useState("");
   const [eventType, setEventType] = useState("");
+  const [venue, setVenue] = useState("");
 
   useEffect(() => {
     console.log(eventType);
   }, []);
 
   const submitHandler = () => {
-    let packages_str = "";
-    packages.map((p) => (packages_str += `${p},`));
-
-    let venue_str = "";
-    vanuetobe.map((v) => (venue_str += `${v},`));
-
-    console.log("Packages: " + packages_str);
-    console.log("Venue To Be: " + venue_str);
-
     const reqURL = "/contactInquiries/insert.php";
 
     const formData = {
-      _insertInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
-      firstName: fname,
-      lastName: lname,
-      gender: gender,
-      packages: packages_str,
-      postCode: pcode,
-      eventDate: eventdate,
-      venueToBe: vanuetobe,
-      totalGuests: totalguests,
-      eventType: Eventtype,
+      _insertContactInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
+      firstName: fullName,
+      contact_no: phone,
       email: email,
-      phone: phno,
-      comment: comment,
-      howYouKnow: howuknow,
+      total_guests: numOfGuests,
+      date: date,
+      type_of_party: eventType,
     };
 
     Axios.post(reqURL, formData)
@@ -118,6 +104,8 @@ const Contact = () => {
               </div>
               <input
                 className={style.inputs}
+                value={venue}
+                onChange={(e) => setVenue(e.target.value)}
                 type="text"
                 placeholder="Venue if any"
               />
@@ -146,7 +134,11 @@ const Contact = () => {
                 <ReCAPTCHA sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt" />
               </div>
               <div>
-                <button type="submit" className={style.submitbtn} onClick={submitHandler}>
+                <button
+                  type="submit"
+                  className={style.submitbtn}
+                  onClick={submitHandler}
+                >
                   SUBMIT
                 </button>
               </div>
