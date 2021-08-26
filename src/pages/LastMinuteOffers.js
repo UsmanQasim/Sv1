@@ -42,9 +42,7 @@ const checkbox2 = [
   "Within 2 Hours",
 ];
 
-const GENDERS = [
-  "Mr", "Mrs"
-]
+const GENDERS = ["Mr", "Mrs"];
 
 const LastMinuteOffers = () => {
   // For Modal
@@ -59,7 +57,7 @@ const LastMinuteOffers = () => {
   const [lname, setLname] = useState("");
   const [packages, setPackages] = useState([]);
   const [pcode, setPcode] = useState(0);
-  const [eventdate, setEventdate] = useState('');
+  const [eventdate, setEventdate] = useState("");
   const [vanuetobe, setVenuetobe] = useState(checkbox2[0]);
   const [totalguests, setTotalGuest] = useState("60");
   const [Eventtype, setEventtype] = useState("");
@@ -68,6 +66,7 @@ const LastMinuteOffers = () => {
   const [comment, setComment] = useState("");
   const [howuknow, setHowuKnow] = useState("");
   const [captchaSubmitted, setCaptchaSubmitted] = useState(false);
+  const [error, setError] = useState("");
 
   const onChange = (value) => {
     setCaptchaSubmitted(value);
@@ -78,32 +77,33 @@ const LastMinuteOffers = () => {
       ? setPackages([...packages, value])
       : setPackages(packages.filter((p) => (p === value ? false : true)));
 
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (
+      !fname ||
+      !lname ||
+      !pcode ||
+      !eventdate ||
+      !Eventtype ||
+      !email ||
+      !phno ||
+      !comment ||
+      !howuknow
+    ) {
+      setError("Fill All The Fields");
+      return;
+    }
+
     let packages_str = "";
     packages.map((p) => (packages_str += `${p},`));
-    
-    // const formData = {
-    //   firstName: fname,
-    //   lastName: lname,
-    //   gender: gender,
-    //   packages: packages_str,
-    //   postCode: pcode,
-    //   eventDate: eventdate,
-    //   venueToBe: vanuetobe,
-    //   totalGuests: totalguests,
-    //   eventType: Eventtype,
-    //   email: email,
-    //   phone: phno,
-    //   comment: comment,
-    //   howYouKnow: howuknow,
-    // };
-    
+
     const reqURL = "/api/v1/inquiries/insert.php?api_key=" + API_KEY;
 
     const xhttp = new XMLHttpRequest();
-    xhttp.onload = function() {
+    xhttp.onload = function () {
       console.log(this.responseText);
-    }
+    };
 
     const reqData = `firstName=${fname}&lastName=${lname}&gender=${gender}&packages=${packages_str}&postCode=${pcode}&eventDate=${eventdate}&venueToBe=${vanuetobe}&totalGuests=${totalguests}&eventType=${Eventtype}&email=${email}&phone=${phno}&comment=${comment}&howYouKnow=${howuknow}`;
 
@@ -124,7 +124,12 @@ const LastMinuteOffers = () => {
               {GENDERS.map((g, key) => {
                 return (
                   <React.Fragment key={key}>
-                    <input type="radio" checked={gender === g} value={g} onChange={() => setGender(g)} />
+                    <input
+                      type="radio"
+                      checked={gender === g}
+                      value={g}
+                      onChange={() => setGender(g)}
+                    />
                     <label>&nbsp;{g}&nbsp; &nbsp;</label>
                   </React.Fragment>
                 );
@@ -143,6 +148,7 @@ const LastMinuteOffers = () => {
                 value={fname}
                 onChange={(e) => setFname(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -158,6 +164,7 @@ const LastMinuteOffers = () => {
                 value={lname}
                 onChange={(e) => setLname(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -219,6 +226,7 @@ const LastMinuteOffers = () => {
                 onChange={(e) => setPcode(e.target.value)}
                 className={style.inputs}
                 min={0}
+                required
               />
             </div>
           </div>
@@ -234,6 +242,7 @@ const LastMinuteOffers = () => {
                 value={eventdate}
                 onChange={(e) => setEventdate(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -290,6 +299,7 @@ const LastMinuteOffers = () => {
                 min={0}
                 onChange={(e) => setTotalGuest(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -319,6 +329,7 @@ const LastMinuteOffers = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -335,6 +346,7 @@ const LastMinuteOffers = () => {
                 value={phno}
                 onChange={(e) => setPhoneno(e.target.value)}
                 className={style.inputs}
+                required
               />
             </div>
           </div>
@@ -350,6 +362,7 @@ const LastMinuteOffers = () => {
                 className={style.inputs}
                 style={{ resize: "none", padding: "5px 10px" }}
                 height="200px"
+                required
               ></textarea>
             </div>
           </div>
@@ -371,13 +384,13 @@ const LastMinuteOffers = () => {
               onChange={onChange}
             />
           </div>
+          <div>{error ? <div className={style.err}>error</div> : ""}</div>
           <div className={style.btnSubmit}>
             <Button
               variant="outline-primary"
               size="lg"
               onClick={submitHandler}
-              // onClick={handleShow}
-              disabled={captchaSubmitted ? false : false}
+              disabled={captchaSubmitted ? false : true}
             >
               Submit
             </Button>
