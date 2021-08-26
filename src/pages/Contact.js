@@ -24,21 +24,19 @@ const Contact = () => {
   const [venue, setVenue] = useState("");
 
   const submitHandler = () => {
-    const reqURL = "/api/v1/contactInquiries/insert.php";
+    const reqURL = "/api/v1/contactInquiries/insert.php?api_key=" + API_KEY;
 
-    const formData = {
-      _insertContactInquiryToken: "0029c3f54faa8d898fc2fd6f4b731311",
-      firstName: fullName,
-      contact_no: phone,
-      email: email,
-      total_guests: numOfGuests,
-      date: date,
-      type_of_party: eventType,
-    };
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      console.log(this.responseText);
+    }
 
-    Axios.post(reqURL, formData)
-      .then((res) => console.log(res.data))
-      .catch((error) => console.log(error.message));
+    const reqData = `fullName=${fullName}&contact=${phone}&email=${email}&numOfGuests=${numOfGuests}&date=${date}&eventType=${eventType}&venue=${venue}`;
+
+    xhttp.open("POST", reqURL);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(reqData);
+
   };
 
   return (
