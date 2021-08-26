@@ -98,7 +98,7 @@ const LastMinuteOffers = () => {
     //   howYouKnow: howuknow,
     // };
     
-    const reqURL = "/v1/inquiries/insert.php?api_key=" + API_KEY;
+    const reqURL = "/api/v1/inquiries/insert.php?api_key=" + API_KEY;
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
