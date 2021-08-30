@@ -3,7 +3,7 @@ import * as AiIcons from "react-icons/ai";
 
 export const SidemenuData = [
   {
-    title: "Pakistan Wedding",
+    title: "Pakistani Wedding",
     path: "/",
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text",

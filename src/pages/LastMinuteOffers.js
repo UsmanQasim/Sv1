@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import Select from "react-select";
 import { API_KEY } from "../utlis/secrets";
 import { Modal } from "react-bootstrap";
+import moment from "moment";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -20,26 +21,26 @@ const second_options = [
   { value: "Advertisment", label: "Advertisment" },
   { value: "Friend", label: "Friend" },
   { value: "News", label: "News" },
-  { value: "SocialMedia", label: "SocialMedia" },
+  { value: "Social Media", label: "Social Media" },
   { value: "Frequent Customer", label: "Frequent Customer" },
   { value: "Other", label: "Other" },
 ];
 
 const checkbox1 = [
   "Wedding Package",
-  " Entertainer",
-  "Decor",
+  "Wedding Venue",
+  "Catering",
+  "Décor",
   "Wedding Cake",
-  "Wedding Vanue",
   "Photographer",
-  "Caterer",
+  "Entertainment",
 ];
 
 const checkbox2 = [
   "Close",
   "Less than 5 miles",
-  "I Dont Care",
   "Within 2 Hours",
+  "I Dont Care",
 ];
 
 const GENDERS = ["Mr", "Mrs"];
@@ -216,16 +217,16 @@ const LastMinuteOffers = () => {
           <div className={style.sections}>
             <div className={style.labelinput}>
               <label>
-                Postal Code <span> *</span>
+                Post code
+                <span> *</span>
               </label>
             </div>
             <div className={style.nameinput}>
               <input
-                type="number"
+                type="text"
                 value={pcode}
                 onChange={(e) => setPcode(e.target.value)}
                 className={style.inputs}
-                min={0}
                 required
               />
             </div>
@@ -240,6 +241,7 @@ const LastMinuteOffers = () => {
               <input
                 type="date"
                 value={eventdate}
+                mindate={moment}
                 onChange={(e) => setEventdate(e.target.value)}
                 className={style.inputs}
                 required
@@ -352,7 +354,7 @@ const LastMinuteOffers = () => {
           </div>
           <div className={style.sections}>
             <div className={style.labelinput}>
-              <label>My Comments</label>
+              <label>Comments</label>
             </div>
             <div className={style.nameinput}>
               <textarea
