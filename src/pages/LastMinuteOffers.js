@@ -404,7 +404,7 @@ const LastMinuteOffers = () => {
               variant="outline-primary"
               size="lg"
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : false}
+              disabled={captchaSubmitted ? false : true}
             >
               Submit
             </Button>
