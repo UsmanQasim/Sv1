@@ -68,7 +68,7 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <p className={style.text}>
                   Last Minute Catering & Events{" "}
-                  <p className={style.textby}>By Spicy Village</p>
+                  <p className={style.textby}>By Last Minute Wedding</p>
                 </p>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
@@ -80,7 +80,7 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <p className={style.text}>
                   Last Minute Catering & Events{" "}
-                  <p className={style.textby}>By Spicy Village</p>
+                  <p className={style.textby}>By Last Minute Wedding</p>
                 </p>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
@@ -92,7 +92,7 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <p className={style.text}>
                   Last Minute Catering & Events{" "}
-                  <p className={style.textby}>By Spicy Village</p>
+                  <p className={style.textby}>By Last Minute Wedding</p>
                 </p>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
@@ -113,7 +113,7 @@ const Main = () => {
           </p>
           <div className={style.paragraph}>
             <p>
-              The Story of Spice Village is a story of taste, passion and
+              The Story of Last Minute Wedding is a story of taste, passion and
               excellence. It all started by Suleman Raza, a teenager who
               migrated to London in pursuit of a better life in early 2000,
               found himself sweating as a chef in a Brixton based eatery in
@@ -136,10 +136,10 @@ const Main = () => {
               from Hollywood & Bollywood.
             </p>
             <p>
-              Suleman has been recently awarded the 'Curry King in Greater
+              Director has been recently awarded the 'Curry King in Greater
               London 2019 Award" and has also been ranked amongst the 100 most
               influential persons in the British food & hospitality industry.
-              Suleman Regularly appears on radio, newspapers and TV, including
+              Director Regularly appears on radio, newspapers and TV, including
               BBC as a restaurateur, food and business expert, contributing his
               expertise to inspire, build and reflect the true British success
               story.

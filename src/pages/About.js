@@ -60,34 +60,35 @@ const About = () => {
         <img src={smalllogo} alt="logo" className={style.imgstory} />
         <p className={style.title_story}>DIRECTOR'S MESSAGE</p>
         <p className={style.text}>
-          At Spice Village, every meal has a story. Sometimes two love birds
-          meet once and like the way they break the bread together. Sometimes
-          business partnerships happen while cherishing the taste buds.
-          Sometimes we gather around food to celebrate. At times, to reconcile
-          after a rift. I believe food is just not eaten to curb our animalistic
-          hunger pangs but to share, celebrate, connect and collaborate.
-          Restaurants have played an essential role in the business, social,
-          intellectual and many aspects of our day to day lives. Most of us have
-          met our significant others in restaurants creating lasting memories.
-          In business, we’ve sketched world changing ideas and planned
-          billion-dollar success stories in restaurants, sometimes on a napkin.
+          At Last Minute Wedding, every meal has a story. Sometimes two love
+          birds meet once and like the way they break the bread together.
+          Sometimes business partnerships happen while cherishing the taste
+          buds. Sometimes we gather around food to celebrate. At times, to
+          reconcile after a rift. I believe food is just not eaten to curb our
+          animalistic hunger pangs but to share, celebrate, connect and
+          collaborate. Restaurants have played an essential role in the
+          business, social, intellectual and many aspects of our day to day
+          lives. Most of us have met our significant others in restaurants
+          creating lasting memories. In business, we’ve sketched world changing
+          ideas and planned billion-dollar success stories in restaurants,
+          sometimes on a napkin.
         </p>
         <p className={style.text}>
-          At Spice Village, the premise is simple; we tell our story through the
-          food we serve. Thus, every meal tells a different story. The same goes
-          for naming the restaurant Spice Village. Our customers do ask me the
-          rhyme or reason behind this unique name. In my view, spices not only
-          add flavour to food, but also contain many beneficial nutrients. Once
-          an expensive commodity, and one that men would risk their lives for,
-          herbs and spices have played an important part in the development of
-          civilization. Village denotes to me a small and closely knitted
-          community where almost everyone knows everyone. So Spice Village to me
-          is a place where strangers come together for revival and renewal, to
-          form and forge bonds and relationships through the infinite healing
-          power of spices.
+          At Last Minute Wedding, the premise is simple; we tell our story
+          through the food we serve. Thus, every meal tells a different story.
+          The same goes for naming the restaurant Last Minute Wedding. Our
+          customers do ask me the rhyme or reason behind this unique name. In my
+          view, spices not only add flavour to food, but also contain many
+          beneficial nutrients. Once an expensive commodity, and one that men
+          would risk their lives for, herbs and spices have played an important
+          part in the development of civilization. Village denotes to me a small
+          and closely knitted community where almost everyone knows everyone. So
+          Last Minute Wedding to me is a place where strangers come together for
+          revival and renewal, to form and forge bonds and relationships through
+          the infinite healing power of spices.
         </p>
         <p className={style.text}>
-          The Story of Spice Village is a story of taste, passion and
+          The Story of Last Minute Wedding is a story of taste, passion and
           excellence. From a small corner shop in Tooting in 2004, Spice Village
           expanded to become a multi-award-winning restaurant chain with fans
           from Hollywood & Bollywood including the Mayor of London. We envisaged
@@ -109,7 +110,7 @@ const About = () => {
           <b>Profound regards,</b>
         </p>
         <p className={style.text}>
-          <b>Raja Suleman Raza</b>
+          <b>Director</b>
         </p>
       </div>
       <div className={style.slidercontainer}>

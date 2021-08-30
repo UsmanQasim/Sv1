@@ -23,3 +23,19 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+::-webkit-scrollbar {
+  width: 7.5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(31, 30, 30);
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -17,7 +17,8 @@
   z-index: 15;
 }
 .left_nev {
-  color: #9d915d;
+  /* color: #9d915d; */
+  color: maroon;
   display: flex;
   justify-content: flex-start;
   padding-left: 25px;
@@ -42,12 +43,12 @@
 .telno {
   font-size: inherit;
   text-decoration: none;
-  color: #9d915d;
+  /* color: #9d915d; */
+  color: maroon;
   transition: ease-in-out 0.3s;
 }
 .telno:hover {
   text-decoration: none;
-  font-weight: bold;
   color: rgb(104, 88, 88);
 }
 
@@ -69,7 +70,8 @@
 }
 
 .logo {
-  color: bisque;
+  /* color: bisque; */
+  color: maroon;
 }
 
 .right_nev {
@@ -97,7 +99,8 @@
 .right_icons {
   font-size: 28px;
   text-align: center;
-  color: #9d915d;
+  /* color: #9d915d; */
+  color: maroon;
   cursor: pointer;
 }
 .right_icons:hover {
@@ -110,7 +113,8 @@
   align-items: center;
   margin-top: 15px;
   height: 80px;
-  background-color: #9d915d;
+  /* background-color: #9d915d; */
+  background: maroon;
 }
 .linkbtn {
   width: 100%;

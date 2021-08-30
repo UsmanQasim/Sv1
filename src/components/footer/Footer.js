@@ -18,9 +18,9 @@ const footer = () => {
           <Link to="/termsandcondition" className={styles.links}>
             Terms and Conditions
           </Link>
-          <Link to="/covid" className={styles.links}>
+          {/* <Link to="/covid" className={styles.links}>
             Covid-19 Updates
-          </Link>
+          </Link> */}
         </Container>
         <Container className={styles.bottomLine}>
           <p>All Rights Reserved 2021. Terms. Privacy Notice.</p>
