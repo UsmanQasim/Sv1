@@ -6,6 +6,7 @@ import swal from "sweetalert";
 import moment from "moment";
 
 import { API_KEY } from "../utlis/secrets";
+import Modal from "../components/modal/Modal";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -26,6 +27,7 @@ const Contact = () => {
   const [venue, setVenue] = useState("");
   const [error, setError] = useState("");
   const [captchaSubmitted, setCaptchaSubmitted] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const captchaSubmitHandler = (val) => {
     setCaptchaSubmitted(val);
@@ -53,12 +55,18 @@ const Contact = () => {
     xhttp.onload = function () {
       switch (this.responseText) {
         case "success":
-          swal({
-            title: "Success!",
-            text: "Form Submitted successfull!",
-            icon: "success",
-            button: "Aww yiss!",
-          });
+          // swal({
+          //   title: "Success!",
+          //   text: "Form Submitted successfull!",
+          //   icon: "success",
+          //   button: "Aww yiss!",
+          // });
+
+          setModalOpen(true);
+
+          //if you want to reload the page, uncomment the following line
+          // window.location.reload(); 
+
           break;
 
         default:
@@ -77,6 +85,7 @@ const Contact = () => {
 
   return (
     <>
+      {modalOpen ? <Modal setModalOpen={setModalOpen} text="Enquiry Sent Successfully!" /> : ''}
       <section className={style.contactFormContainer}>
         <form className={style.form}>
           <div>
@@ -178,7 +187,7 @@ const Contact = () => {
               type="submit"
               className={style.submitbtn}
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : true}
+              disabled={captchaSubmitted ? false : false}
             >
               SUBMIT
             </button>
