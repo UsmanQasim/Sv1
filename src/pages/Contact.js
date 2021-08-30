@@ -3,7 +3,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
 import style from "../pages/Contact.module.css";
 
-import {API_KEY} from '../utlis/secrets';
+import { API_KEY } from '../utlis/secrets';
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -63,117 +63,113 @@ const Contact = () => {
 
   return (
     <>
-      <section className={style.contact_section_1}>
-        <div className={style.banner_inner}>
-          <div className={style.banner_content}>
-            <form className={style.banner_content_inputs}>
-              <div>
-                <p className={style.text}>Contact us today</p>
-              </div>
-              <input
-                className={style.inputs}
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                type="text"
-                placeholder="Full Name"
-                required
-              />
-              <input
-                className={style.inputs}
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                type="number"
-                placeholder="Best Contact Number"
-                required
-              />
-              <input
-                className={style.inputs}
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="Email Address"
-                required
-              />
-              <input
-                className={style.inputs}
-                value={numOfGuests}
-                onChange={(e) => setNumOfGuests(e.target.value)}
-                min={0}
-                onFocus={(e) => (e.target.type = "number")}
-                onBlur={(e) => (e.target.type = "text")}
-                placeholder="Number Of Guests"
-                required
-              />
-              <input
-                className={style.inputs}
-                placeholder="Prefered Date Of Event"
-                type="text"
-                onFocus={(e) => (e.target.type = "date")}
-                onBlur={(e) => (e.target.type = "text")}
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                id="date"
-                required
-              />
-              <div className={style.nameinput}>
-                <Select
-                  options={options}
-                  className={style.Select_input}
-                  placeholder="Event Type"
-                  onChange={(e) => setEventType(e.value)}
-                />
-              </div>
-              <input
-                className={style.inputs}
-                value={venue}
-                onChange={(e) => setVenue(e.target.value)}
-                type="text"
-                placeholder="Venue if any"
-                required
-              />
-              <div className={style.checkboxs}>
-                <input
-                  type="checkbox"
-                  value="I agree to receive emails from Spice Village on services/products they offer and allow them to contact me from time to time."
-                  required
-                />
-                <p>
-                  I agree to receive emails from Spice Village on
-                  services/products they offer and allow them to contact me from
-                  time to time.
-                </p>
-              </div>
-              <div className={style.checkboxs}>
-                <input
-                  type="checkbox"
-                  value="By submitting this form, you agree to Spice Village Terms &amp; Conditions and Privacy Notice."
-                  required
-                />
-                <p>
-                  By submitting this form, you agree to Spice Village Terms
-                  &amp; Conditions and Privacy Notice.
-                </p>
-              </div>
-              <div>
-                <ReCAPTCHA
-                  sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt"
-                  onChange={captchaSubmitHandler}
-                />
-              </div>
-              <div>{error ? <div className={style.err}>error</div> : ""}</div>
-              <div>
-                <button
-                  type="submit"
-                  className={style.submitbtn}
-                  onClick={submitHandler}
-                  disabled={captchaSubmitted ? false : true}
-                >
-                  SUBMIT
-                </button>
-              </div>
-            </form>
+      <section className={style.contactFormContainer}>
+        <form className={style.form}>
+          <div>
+            <p className={style.title_story}>Contact us today</p>
           </div>
-        </div>
+          <input
+            className={style.inputField}
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+            type="text"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            className={style.inputField}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            type="number"
+            placeholder="Best Contact Number"
+            required
+          />
+          <input
+            className={style.inputField}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            className={style.inputField}
+            value={numOfGuests}
+            onChange={(e) => setNumOfGuests(e.target.value)}
+            min={0}
+            onFocus={(e) => (e.target.type = "number")}
+            onBlur={(e) => (e.target.type = "text")}
+            placeholder="Number Of Guests"
+            required
+          />
+          <input
+            className={style.inputField}
+            placeholder="Prefered Date Of Event"
+            type="text"
+            onFocus={(e) => (e.target.type = "date")}
+            onBlur={(e) => (e.target.type = "text")}
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            id="date"
+            required
+          />
+          <div className={style.selectContainer}>
+            <Select
+              options={options}
+              className={style.select}
+              placeholder="Event Type"
+              onChange={(e) => setEventType(e.value)}
+            />
+          </div>
+          <input
+            className={style.inputField}
+            value={venue}
+            onChange={(e) => setVenue(e.target.value)}
+            type="text"
+            placeholder="Venue if any"
+            required
+          />
+          <div className={style.checkbox}>
+            <input
+              type="checkbox"
+              value="I agree to receive emails from Spice Village on services/products they offer and allow them to contact me from time to time."
+              required
+            />
+            <p>
+              I agree to receive emails from Spice Village on
+              services/products they offer and allow them to contact me from
+              time to time.
+            </p>
+          </div>
+          <div className={style.checkbox}>
+            <input
+              type="checkbox"
+              value="By submitting this form, you agree to Spice Village Terms &amp; Conditions and Privacy Notice."
+              required
+            />
+            <p>
+              By submitting this form, you agree to Spice Village Terms
+              &amp; Conditions and Privacy Notice.
+            </p>
+          </div>
+          <div>
+            <ReCAPTCHA
+              sitekey="6LdJg8YbAAAAAF4pTfWEGCnZyPOqT8VMi3OivNlt"
+              onChange={captchaSubmitHandler}
+            />
+          </div>
+          <div>{error ? <div className={style.err}>error</div> : ""}</div>
+          <div>
+            <button
+              type="submit"
+              className={style.submitbtn}
+              onClick={submitHandler}
+              disabled={captchaSubmitted ? false : true}
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
       </section>
     </>
   );
