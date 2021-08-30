@@ -32,7 +32,7 @@ const Sidemenu = () => {
                 <li key={index} className={item.cName}>
                   <Link to={item.path}>
                     {item.icon}
-                    <spam>{item.title}</spam>
+                    <span className="sidemenu_text_color">{item.title}</span>
                   </Link>
                 </li>
               );

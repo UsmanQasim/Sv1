@@ -82,6 +82,12 @@ input {
 .recap {
   margin-top: 15px;
 }
+.err {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .btnSubmit {
   margin-top: 15px;
 }

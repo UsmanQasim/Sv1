@@ -5,15 +5,17 @@ import { Button } from "react-bootstrap";
 import Select from "react-select";
 import { API_KEY } from "../utlis/secrets";
 import { Modal } from "react-bootstrap";
-import moment from "moment";
+import swal from "sweetalert";
+
+// import moment from "moment";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
   { value: "Corporate", label: "Corporate" },
-  { value: "CharityDinner", label: "CharityDinner" },
-  { value: "PrivateParties", label: "PrivateParties" },
-  { value: "AwardsNight", label: "AwardsNight" },
-  { value: "GalaDinner", label: "GalaDinner" },
+  { value: "Charity Dinner", label: "Charity Dinner" },
+  { value: "Private Party", label: "Private Party" },
+  { value: "Awards Night", label: "Awards Night" },
+  { value: "Gala Dinner", label: "Gala Dinner" },
 ];
 
 const second_options = [
@@ -92,7 +94,7 @@ const LastMinuteOffers = () => {
       !comment ||
       !howuknow
     ) {
-      setError("Fill All The Fields");
+      setError("Fill All The Required(*) Fields");
       return;
     }
 
@@ -103,6 +105,16 @@ const LastMinuteOffers = () => {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
+      // Success Submit
+      swal({
+        title: "Success!",
+        text: "Form Submitted successfull!",
+        icon: "success",
+        button: "Aww yiss!",
+      });
+
+      // End
+
       console.log(this.responseText);
     };
 
@@ -241,7 +253,7 @@ const LastMinuteOffers = () => {
               <input
                 type="date"
                 value={eventdate}
-                mindate={moment}
+                // mindate={moment}
                 onChange={(e) => setEventdate(e.target.value)}
                 className={style.inputs}
                 required
@@ -386,13 +398,13 @@ const LastMinuteOffers = () => {
               onChange={onChange}
             />
           </div>
-          <div>{error ? <div className={style.err}>error</div> : ""}</div>
+          <div>{error ? <div className={style.err}>{error}</div> : ""}</div>
           <div className={style.btnSubmit}>
             <Button
               variant="outline-primary"
               size="lg"
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : true}
+              disabled={captchaSubmitted ? false : false}
             >
               Submit
             </Button>
