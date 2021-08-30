@@ -2,17 +2,18 @@ import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
 import style from "../pages/Contact.module.css";
+import swal from "sweetalert";
+import moment from "moment";
 
-import { API_KEY } from '../utlis/secrets';
+import { API_KEY } from "../utlis/secrets";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
   { value: "Corporate", label: "Corporate" },
-  { value: "PrivateParties", label: "PrivateParties" },
-  { value: "CharityDinner", label: "CharityDinner" },
-  { value: "PrivateParties", label: "PrivateParties" },
-  { value: "AwardsNight", label: "AwardsNight" },
-  { value: "GalaDinner", label: "GalaDinner" },
+  { value: "Charity Dinner", label: "Charity Dinner" },
+  { value: "Private Party", label: "Private Party" },
+  { value: "Awards Night", label: "Awards Night" },
+  { value: "Gala Dinner", label: "Gala Dinner" },
 ];
 
 const Contact = () => {
@@ -28,7 +29,6 @@ const Contact = () => {
 
   const captchaSubmitHandler = (val) => {
     setCaptchaSubmitted(val);
-    console.log(val);
   };
 
   const submitHandler = (e) => {
@@ -51,6 +51,20 @@ const Contact = () => {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
+      switch (this.responseText) {
+        case "success":
+          swal({
+            title: "Success!",
+            text: "Form Submitted successfull!",
+            icon: "success",
+            button: "Aww yiss!",
+          });
+          break;
+
+        default:
+          break;
+      }
+
       console.log(this.responseText);
     };
 
@@ -81,7 +95,7 @@ const Contact = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             type="number"
-            placeholder="Best Contact Number"
+            placeholder="Contact Number"
             required
           />
           <input
@@ -111,6 +125,7 @@ const Contact = () => {
             value={date}
             onChange={(e) => setDate(e.target.value)}
             id="date"
+            min={moment().format("YYYY-MM-DD")}
             required
           />
           <div className={style.selectContainer}>
@@ -136,9 +151,8 @@ const Contact = () => {
               required
             />
             <p>
-              I agree to receive emails from Spice Village on
-              services/products they offer and allow them to contact me from
-              time to time.
+              I agree to receive emails from Spice Village on services/products
+              they offer and allow them to contact me from time to time.
             </p>
           </div>
           <div className={style.checkbox}>
@@ -148,8 +162,8 @@ const Contact = () => {
               required
             />
             <p>
-              By submitting this form, you agree to Spice Village Terms
-              &amp; Conditions and Privacy Notice.
+              By submitting this form, you agree to Spice Village Terms &amp;
+              Conditions and Privacy Notice.
             </p>
           </div>
           <div>
@@ -158,7 +172,7 @@ const Contact = () => {
               onChange={captchaSubmitHandler}
             />
           </div>
-          <div>{error ? <div className={style.err}>error</div> : ""}</div>
+          <div>{error ? <div className={style.err}>{error}</div> : ""}</div>
           <div>
             <button
               type="submit"

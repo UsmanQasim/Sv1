@@ -1,17 +1,19 @@
 .contactFormContainer {
-  height: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../GalleryPhotos/contact-background.jpg) !important;
+
+  height: auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: #fff !important;
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background: #aaaaaa;
-  padding: 25px 10px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-size: cover !important;
+  padding: 25px 10px !important;
 }
 
 .title_story {
@@ -82,6 +84,12 @@
 .checkbox p {
   width: 90%;
   margin: 0 5px;
+}
+
+.err {
+  color: red;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .submitbtn {

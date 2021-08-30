@@ -4,10 +4,8 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "react-bootstrap";
 import Select from "react-select";
 import { API_KEY } from "../utlis/secrets";
-import { Modal } from "react-bootstrap";
 import swal from "sweetalert";
-
-// import moment from "moment";
+import moment from "moment";
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -48,13 +46,6 @@ const checkbox2 = [
 const GENDERS = ["Mr", "Mrs"];
 
 const LastMinuteOffers = () => {
-  // For Modal
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-
-  // Ends
-
   const [gender, setGender] = useState(GENDERS[0]);
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -253,7 +244,7 @@ const LastMinuteOffers = () => {
               <input
                 type="date"
                 value={eventdate}
-                // mindate={moment}
+                min={moment().format("YYYY-MM-DD")}
                 onChange={(e) => setEventdate(e.target.value)}
                 className={style.inputs}
                 required
@@ -411,19 +402,6 @@ const LastMinuteOffers = () => {
           </div>
         </div>
       </form>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          Please Fill All Reuired (<span>*</span>) Fields
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Ok
-          </Button>
-        </Modal.Footer>
-      </Modal>
       <div style={{ height: "50px", marginBottom: 5 }}></div>
     </>
   );
