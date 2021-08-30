@@ -1,3 +1,5 @@
+@import "../../colors.css";
+
 * {
   padding: 0px;
   margin: 0px;
@@ -17,8 +19,7 @@
   z-index: 15;
 }
 .left_nev {
-  /* color: #9d915d; */
-  color: maroon;
+  color: var(--primary);
   display: flex;
   justify-content: flex-start;
   padding-left: 25px;
@@ -40,8 +41,7 @@
 .telno {
   font-size: inherit;
   text-decoration: none;
-  /* color: #9d915d; */
-  color: maroon;
+  color: var(--primary);
   transition: ease-in-out 0.3s;
 }
 .telno:hover {
@@ -68,7 +68,7 @@
 
 .logo {
   /* color: bisque; */
-  color: maroon;
+  color: var(--primary);
 }
 
 .right_nev {
@@ -97,7 +97,7 @@
   font-size: 28px;
   text-align: center;
   /* color: #9d915d; */
-  color: maroon;
+  color: var(--primary);
   cursor: pointer;
 }
 .right_icons:hover {
@@ -111,7 +111,7 @@
   margin-top: 15px;
   height: 80px;
   /* background-color: #9d915d; */
-  background: maroon;
+  background: var(--primary);
 }
 .linkbtn {
   width: 100%;

@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 .contactFormContainer {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(../GalleryPhotos/contact-background.jpg) !important;
@@ -21,7 +23,7 @@
   font-size: 28px;
   font-weight: 400;
   line-height: 1.4;
-  color: #9d915d;
+  color: var(--primary);
   letter-spacing: 1.2px;
   cursor: default;
 }
@@ -87,7 +89,7 @@
 }
 
 .err {
-  color: red;
+  color: var(--primary);
   font-size: 18px;
   font-weight: 600;
 }
@@ -99,7 +101,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: ease-in-out 0.3s;
-  background-color: #9d915d;
+  background-color: var(--primary);
   color: #fff;
   font-weight: 700;
   margin-top: 5px;
@@ -108,5 +110,5 @@
 }
 .submitbtn:hover {
   background-color: #3b3f3f;
-  color: #9d915d;
+  color: var(--primary);
 }

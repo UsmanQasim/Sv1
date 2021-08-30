@@ -1,3 +1,5 @@
+@import "../colors.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -31,7 +33,7 @@ label {
   margin-bottom: 0;
 }
 span {
-  color: red;
+  color: var(--primary);
 }
 .labelinput {
   width: 30%;
@@ -83,7 +85,7 @@ input {
   margin-top: 15px;
 }
 .err {
-  color: red;
+  color: var(--primary);
   font-size: 18px;
   font-weight: 600;
 }

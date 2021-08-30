@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import Select from "react-select";
 import style from "../pages/Contact.module.css";
-import swal from "sweetalert";
 import moment from "moment";
 
 import { API_KEY } from "../utlis/secrets";
@@ -55,17 +54,10 @@ const Contact = () => {
     xhttp.onload = function () {
       switch (this.responseText) {
         case "success":
-          // swal({
-          //   title: "Success!",
-          //   text: "Form Submitted successfull!",
-          //   icon: "success",
-          //   button: "Aww yiss!",
-          // });
-
           setModalOpen(true);
 
           //if you want to reload the page, uncomment the following line
-          // window.location.reload(); 
+          // window.location.reload();
 
           break;
 
@@ -85,7 +77,11 @@ const Contact = () => {
 
   return (
     <>
-      {modalOpen ? <Modal setModalOpen={setModalOpen} text="Enquiry Sent Successfully!" /> : ''}
+      {modalOpen ? (
+        <Modal setModalOpen={setModalOpen} text="Enquiry Sent Successfully!" />
+      ) : (
+        ""
+      )}
       <section className={style.contactFormContainer}>
         <form className={style.form}>
           <div>

@@ -1,3 +1,5 @@
+@import "../../colors.css";
+
 .navbar {
   height: 80px;
   display: flex;
@@ -42,7 +44,7 @@
 
 .nav-text a {
   text-decoration: none;
-  color: #9d915d;
+  color: var(--primary);
   font-size: 18px;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -74,12 +76,12 @@
 }
 
 .sidemenu_text_color {
-  color: #9d915d;
+  color: var(--primary);
   margin-left: 16px;
 }
 
 .icon-style {
-  color: #9d915d;
+  color: var(--primary);
   font-size: 25px;
 }
 

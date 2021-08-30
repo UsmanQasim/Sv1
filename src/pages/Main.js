@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import style from "../pages/Main.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
-import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg";
@@ -12,50 +11,51 @@ import img3 from "../GalleryPhotos/The-Walled-Garden-At-Syon.jpg";
 import logo from "../sv-logo.svg";
 import pakwed from "../GalleryPhotos/pakwed.jpg";
 import lastmin from "../GalleryPhotos/lastmin.jpg";
-import small1 from "../GalleryPhotos/sponsor slides/clifton.png";
-import small2 from "../GalleryPhotos/sponsor slides/csc-min.png";
-import small3 from "../GalleryPhotos/sponsor slides/diversey-min.png";
-import small4 from "../GalleryPhotos/sponsor slides/food-hygiene-min.png";
-import small5 from "../GalleryPhotos/sponsor slides/food-standards-agency-min.png";
-import small6 from "../GalleryPhotos/sponsor slides/hmc-min.png";
-import small7 from "../GalleryPhotos/sponsor slides/hsqc-min.png";
-import small8 from "../GalleryPhotos/sponsor slides/ISO-9001-min.png";
-import small9 from "../GalleryPhotos/sponsor slides/qms-min.png";
+// import Slider from "react-slick";
+// import small1 from "../GalleryPhotos/sponsor slides/clifton.png";
+// import small2 from "../GalleryPhotos/sponsor slides/csc-min.png";
+// import small3 from "../GalleryPhotos/sponsor slides/diversey-min.png";
+// import small4 from "../GalleryPhotos/sponsor slides/food-hygiene-min.png";
+// import small5 from "../GalleryPhotos/sponsor slides/food-standards-agency-min.png";
+// import small6 from "../GalleryPhotos/sponsor slides/hmc-min.png";
+// import small7 from "../GalleryPhotos/sponsor slides/hsqc-min.png";
+// import small8 from "../GalleryPhotos/sponsor slides/ISO-9001-min.png";
+// import small9 from "../GalleryPhotos/sponsor slides/qms-min.png";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplayspeed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+// const settings = {
+//   dots: true,
+//   infinite: true,
+//   autoplay: true,
+//   autoplayspeed: 500,
+//   slidesToShow: 4,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         infinite: true,
+//         dots: true,
+//       },
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ],
+// };
 
 const Main = () => {
   return (
@@ -275,7 +275,7 @@ const Main = () => {
           </div>
         </section>
 
-        <div className={style.slidercontainer}>
+        {/* <div className={style.slidercontainer}>
           <Slider {...settings}>
             <div style={{ padding: 8 }} className={style.sliderDiv}>
               <img src={small1} alt="placeholder" className={style.sliderImg} />
@@ -322,6 +322,7 @@ const Main = () => {
             </div>
           </Slider>
         </div>
+         */}
       </div>
     </>
   );

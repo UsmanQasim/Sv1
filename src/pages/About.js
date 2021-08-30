@@ -1,57 +1,57 @@
 import React from "react";
 import smalllogo from "../sv-logo.svg";
 import style from "./About.module.css";
-import small3 from "../GalleryPhotos/About Slider/AfraAward1.png";
-import small4 from "../GalleryPhotos/About Slider/asiancurryawards.png";
-import small5 from "../GalleryPhotos/About Slider/british-curry-awards_1.jpg";
-import small6 from "../GalleryPhotos/About Slider/Evening-Standard.png";
-import Slider from "react-slick";
+// import small3 from "../GalleryPhotos/About Slider/AfraAward1.png";
+// import small4 from "../GalleryPhotos/About Slider/asiancurryawards.png";
+// import small5 from "../GalleryPhotos/About Slider/british-curry-awards_1.jpg";
+// import small6 from "../GalleryPhotos/About Slider/Evening-Standard.png";
+// import Slider from "react-slick";
 import "../../node_modules/slick-carousel/slick/slick.css";
 import "../../node_modules/slick-carousel/slick/slick-theme.css";
 
-const settings = {
-  dots: true,
-  infinite: true,
-  autoplay: true,
-  autoplayspeed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 960,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        infinite: true,
-        dots: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ],
-};
+// const settings = {
+//   dots: true,
+//   infinite: true,
+//   autoplay: true,
+//   autoplayspeed: 500,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   responsive: [
+//     {
+//       breakpoint: 1024,
+//       settings: {
+//         slidesToShow: 3,
+//         slidesToScroll: 3,
+//         infinite: true,
+//         dots: true,
+//       },
+//     },
+//     {
+//       breakpoint: 960,
+//       settings: {
+//         slidesToShow: 2,
+//         slidesToScroll: 2,
+//         infinite: true,
+//         dots: true,
+//       },
+//     },
+//     {
+//       breakpoint: 600,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//       },
+//     },
+//   ],
+// };
 
 const About = () => {
   return (
@@ -114,6 +114,7 @@ const About = () => {
         </p>
       </div>
       <div className={style.slidercontainer}>
+        {/* 
         <Slider {...settings}>
           <div style={{ padding: 8 }} className={style.sliderDiv}>
             <img src={small3} alt="placeholder" className={style.sliderImg} />
@@ -128,6 +129,7 @@ const About = () => {
             <img src={small6} alt="placeholder" className={style.sliderImg} />
           </div>
         </Slider>
+       */}
       </div>
     </>
   );

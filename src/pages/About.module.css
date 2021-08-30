@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+@import "../colors.css";
+
 .section {
   width: 100%;
   max-width: 1000px;
@@ -33,7 +35,8 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1.4;
-  color: #9d915d;
+  /* color: #9d915d; */
+  color: var(--primary);
   letter-spacing: 1.2px;
 }
 

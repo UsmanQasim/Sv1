@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap");
+@import "../colors.css";
 
 .coursal_container {
   width: 100%;
@@ -53,7 +54,7 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
-  background-color: #9d915d;
+  background-color: var(--primary);
   border: 0;
   transition: all ease-in-out 0.3s 0s;
 }
@@ -101,7 +102,7 @@
   font-size: 2.1rem;
   font-weight: 400;
   line-height: 1.4;
-  color: #9d915d;
+  color: var(--primary);
   letter-spacing: 1.2px;
 }
 b {
@@ -162,7 +163,7 @@ p {
   text-transform: uppercase;
 }
 .headertitle {
-  color: #9d915d;
+  color: var(--primary);
   font-weight: 600;
   text-align: center;
   font-size: 18px;
@@ -229,7 +230,7 @@ p {
 }
 /*  */
 .strip {
-  background-color: #9d915d;
+  background-color: var(--primary);
   width: 100%;
   max-width: 1300px;
   margin-left: auto;
@@ -310,8 +311,6 @@ p {
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   text-shadow: 2px 2px black;
-  /* -webkit-text-stroke-width: .5px;
-      -webkit-text-stroke-color: black; */
 }
 
 .container_text_p {
@@ -326,7 +325,7 @@ p {
 }
 .floating_goldbar {
   bottom: -200px;
-  background: #9d915d;
+  background: var(--primary);
   color: #fff;
   padding: 5rem 0 5rem 0;
   margin: 0 auto;
@@ -389,7 +388,7 @@ p {
   transition: ease-in-out 0.3s;
 }
 .btn_exp:hover {
-  color: #9d915d;
+  color: var(--primary);
   background-color: black;
 }
 .btnwrap {
