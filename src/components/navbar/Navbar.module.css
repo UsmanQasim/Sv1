@@ -27,6 +27,10 @@
   width: 40%;
   flex-direction: row;
 }
+.halallogo {
+  height: 50px;
+  object-fit: cover;
+}
 
 .left_nev_text {
   padding-top: 10px;
@@ -51,16 +55,18 @@
 
 .center_nev {
   display: flex;
+  overflow: hidden;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
-  width: 30%;
+  /* width: 30%; */
   padding-right: 120px;
 }
 
 .logoimg {
-  height: 65px;
   padding: 2px;
+  height: 200px;
+  object-fit: cover;
 }
 .logoimg:hover {
   cursor: pointer;

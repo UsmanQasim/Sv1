@@ -13,10 +13,10 @@ const Terms = () => {
           <div>
             <ol>
               <li>
-                This website promotes the business (Spice Village) referred to
-                on it. In these conditions, the business will be referred to as
-                'we' and/or 'our'. Spice Village operates the website
-                www.spicevillage.co.uk.
+                This website promotes the business (Last Minute Wedding)
+                referred to on it. In these conditions, the business will be
+                referred to as 'we' and/or 'our'. Last Minute Wedding operates
+                the website www.spicevillage.co.uk.
               </li>
               <li>
                 A wide range of intellectual property rights are used in and
@@ -94,8 +94,8 @@ const Terms = () => {
               </li>
               <li>
                 Event Plan is the description or specification of the Services
-                provided in writing by Spice Village to the Customer including
-                the cost summary applicable for such Services.
+                provided in writing by Last Minute Wedding to the Customer
+                including the cost summary applicable for such Services.
               </li>
               <li>
                 Facilities means the facilities and/or equipment to be provided
@@ -107,13 +107,14 @@ const Terms = () => {
               </p>
               <li>
                 Each Order for Catering Services placed by the Customer with
-                Spice Village shall be deemed to be an offer by the Customer to
-                purchase Catering Services subject to these Terms and Condition
+                Last Minute Wedding shall be deemed to be an offer by the
+                Customer to purchase Catering Services subject to these Terms
+                and Condition
               </li>
               <li>
-                When an Order is placed by the Customer, Spice Village shall
-                issue a quote in respect of such Order (which shall include the
-                Event Plan).
+                When an Order is placed by the Customer, Last Minute Wedding
+                shall issue a quote in respect of such Order (which shall
+                include the Event Plan).
               </li>
               <li>
                 Any quotation is given on the basis that it is not an offer
@@ -125,17 +126,18 @@ const Terms = () => {
                 numbers of guests), it is entitled to do so provided such
                 request to modify is provided in writing no less than 5 Business
                 Days prior to the Event Date. If the Order is so amended by the
-                Customer, a revised quote shall be issued by Spice Village.
+                Customer, a revised quote shall be issued by Last Minute
+                Wedding.
               </li>
               <li>
                 These Terms and Conditions apply to the Catering Services
-                provided by Spice Village to the Customer and any variation to
-                these Terms and Conditions and any representations about the
-                Catering Services shall have no effect unless set out in the
-                Agreement or as expressly agreed in writing and signed by Spice
-                Village.
+                provided by Last Minute Wedding to the Customer and any
+                variation to these Terms and Conditions and any representations
+                about the Catering Services shall have no effect unless set out
+                in the Agreement or as expressly agreed in writing and signed by
+                Spice Village.
               </li>
-              <li>Spice Village shall be responsible for:-</li>
+              <li>Last Minute Wedding shall be responsible for:-</li>
               <ul>
                 <li>
                   Providing the Catering Services in accordance with the Event
@@ -144,10 +146,10 @@ const Terms = () => {
                 </li>
                 <li>
                   Ordering and purchasing of all supplies and equipment (other
-                  than the Facilities) used by Spice Village to provide the
-                  Catering Services. Such supplies to be ordered in the name and
-                  on behalf of Spice Village and not the Customer and shall
-                  remain the property of Spice Village;
+                  than the Facilities) used by Last Minute Wedding to provide
+                  the Catering Services. Such supplies to be ordered in the name
+                  and on behalf of Last Minute Wedding and not the Customer and
+                  shall remain the property of Last Minute Wedding;
                 </li>
                 <li>
                   Choosing, preparing and pricing all food and beverages
@@ -159,14 +161,14 @@ const Terms = () => {
                   Catering Services and all administration relating thereto
                 </li>
                 <li>
-                  Paying all suppliers with whom Spice Village shall enter into
-                  contracts
+                  Paying all suppliers with whom Last Minute Wedding shall enter
+                  into contracts
                 </li>
                 <li>
-                  Removing Spice Village materials from the premises after the
-                  Event Date ensuring that post event, the Premises are left in
-                  at least as clean condition as they were at before the Event
-                  Date;
+                  Removing Last Minute Wedding materials from the premises after
+                  the Event Date ensuring that post event, the Premises are left
+                  in at least as clean condition as they were at before the
+                  Event Date;
                 </li>
                 <li>
                   Effecting and maintaining insurance cover in respect of the
@@ -184,22 +186,23 @@ const Terms = () => {
               <ul>
                 <li>
                   At any time not less than 7 days prior to the Event Date, the
-                  Customer may submit a written request to Spice Village for the
-                  provision of Additional Services.
+                  Customer may submit a written request to Last Minute Wedding
+                  for the provision of Additional Services.
                 </li>
               </ul>
               <li>
-                Spice Village shall not have any liability under or be deemed to
-                be in breach of the Agreement for any delays or failures in
-                performance of this Agreement which result from circumstances
-                beyond the reasonable control of Spice Village. Spice Village
-                shall promptly notify the Customer in writing when such
-                circumstances cause a delay or failure in performance.
+                Last Minute Wedding shall not have any liability under or be
+                deemed to be in breach of the Agreement for any delays or
+                failures in performance of this Agreement which result from
+                circumstances beyond the reasonable control of Last Minute
+                Wedding. Last Minute Wedding shall promptly notify the Customer
+                in writing when such circumstances cause a delay or failure in
+                performance.
               </li>
               <li>
                 Neither party excludes or limits liability to the other party
-                for death, personal injury or fraud. Spice Village does not
-                exclude liability for:-
+                for death, personal injury or fraud. Last Minute Wedding does
+                not exclude liability for:-
               </li>
               <ul>
                 <li>
@@ -218,13 +221,13 @@ const Terms = () => {
                 </li>
               </ul>
               <li>
-                Any advice or recommendation given by Spice Village or its
+                Any advice or recommendation given by Last Minute Wedding or its
                 employees shall be followed or acted upon entirely at the
                 Customer's risk.
               </li>
               <li>
-                Spice Village does not accept responsibility for lost, missing
-                or damaged items in cloakrooms.
+                Last Minute Wedding does not accept responsibility for lost,
+                missing or damaged items in cloakrooms.
               </li>
               <li>
                 Food and/or catering staff, if notice to cancel is given:-
@@ -232,21 +235,22 @@ const Terms = () => {
               <ul>
                 <li>
                   Within 7 days prior to the Event Date, the Customer shall pay
-                  Spice Village an amount equal to 100% of the relevant cost
-                  quoted in the signed Order; or
+                  Last Minute Wedding an amount equal to 100% of the relevant
+                  cost quoted in the signed Order; or
                 </li>
                 <li>
                   More than 7 days prior to the Event Date, the Customer shall
-                  pay to Spice Village an amount equal to 50% of the relevant
-                  cost quoted in the signed Order.
+                  pay to Last Minute Wedding an amount equal to 50% of the
+                  relevant cost quoted in the signed Order.
                 </li>
                 <li>
                   Defective products under the Consumer Protection Act 1987.
                 </li>
               </ul>
               <li>
-                Ensuring that Spice Village is fit for purpose and meets the
-                agreed requirements of the Customer as specified in the Order
+                Ensuring that Last Minute Wedding is fit for purpose and meets
+                the agreed requirements of the Customer as specified in the
+                Order
               </li>
               <li>
                 Taking all reasonable steps necessary to protect it from damage
@@ -264,48 +268,49 @@ const Terms = () => {
               <p>The Customer shall:</p>
               <ul>
                 <li>
-                  In advance of publication, submit to the Spice Village
+                  In advance of publication, submit to the Last Minute Wedding
                   Management Team, a draft of any written material, copy,
                   drawing or photographs relating to the Event the Customer
                   proposes to distribute or publish;
                 </li>
                 <li>
-                  Obtain consent from the Spice Village Management Team before
-                  any filming or photography takes place in the venue.
+                  Obtain consent from the Last Minute Wedding Management Team
+                  before any filming or photography takes place in the venue.
                 </li>
                 <li>
                   Observe and comply with the reasonable access and usage rules,
-                  policies and directions of Spice Village, both prior to and
-                  during an Event, provided such rules, policies and directions
-                  are notified to the Customer in advance of an Event;
+                  policies and directions of Last Minute Wedding, both prior to
+                  and during an Event, provided such rules, policies and
+                  directions are notified to the Customer in advance of an
+                  Event;
                 </li>
                 <li>
                   Observe and comply with the reasonable restrictions imposed by
-                  the Spice Village Management Team in relation to any recorded
-                  and/or live music and dancing permitted at the Event;
+                  the Last Minute Wedding Management Team in relation to any
+                  recorded and/or live music and dancing permitted at the Event;
                 </li>
                 <li>
-                  nform Spice Village at least 5 Business Days prior to the
-                  Event of any revised numbers of guests attending an Event. The
-                  Customer shall be liable to pay the minimum spend set by Spice
-                  Village in relation to the food and beverage element of the
-                  Price, regardless of any such revision in guest numbers.
+                  nform Last Minute Wedding at least 5 Business Days prior to
+                  the Event of any revised numbers of guests attending an Event.
+                  The Customer shall be liable to pay the minimum spend set by
+                  Spice Village in relation to the food and beverage element of
+                  the Price, regardless of any such revision in guest numbers.
                 </li>
                 <li>
                   Conduct an Event in an orderly and safe manner and cease an
                   Event if it becomes apparent that the operation of an Event
                   will cause a risk to the health and safety of guests or any of
-                  Spice Village's property.
+                  Last Minute Wedding's property.
                 </li>
                 <li>
                   As soon as it becomes aware of any damage, accident or injury
-                  connected to an Event to inform Spice Village.
+                  connected to an Event to inform Last Minute Wedding.
                 </li>
                 <li>
-                  Not use any of Spice Village's Intellectual Property Rights on
-                  any Event Materials, or any other materials, without the Spice
-                  Village's prior written consent (such consent not to be
-                  unreasonably withheld or delayed).
+                  Not use any of Last Minute Wedding's Intellectual Property
+                  Rights on any Event Materials, or any other materials, without
+                  the Spice Village's prior written consent (such consent not to
+                  be unreasonably withheld or delayed).
                 </li>
               </ul>
               <li>
@@ -314,7 +319,7 @@ const Terms = () => {
               <li>Ensure that no guests smoke at the Event.</li>
 
               <p>
-                <b>Spice Village Event Management</b>
+                <b>Last Minute Wedding Event Management</b>
               </p>
 
               <li>
@@ -324,35 +329,37 @@ const Terms = () => {
                 set out in the Order.
               </li>
               <li>
-                The Customer may request and the Spice Village Management Team
-                shall provide assistance with lighting and production to create
-                a stylish atmosphere for Events in-keeping with the
+                The Customer may request and the Last Minute Wedding Management
+                Team shall provide assistance with lighting and production to
+                create a stylish atmosphere for Events in-keeping with the
                 surroundings.
               </li>
               <li>
-                The Spice Village Management Team shall be entitled to request
-                guests to leave the Spice Village premises at any time and shall
-                be entitled to remove anyone from the Spice Village who is under
-                the influence of drugs or alcohol or who, in the Spice Village.
+                The Last Minute Wedding Management Team shall be entitled to
+                request guests to leave the Last Minute Wedding premises at any
+                time and shall be entitled to remove anyone from the Last Minute
+                Wedding who is under the influence of drugs or alcohol or who,
+                in the Last Minute Wedding.
               </li>
               <p>
                 <b> Pricing</b>
               </p>
               <li>
                 In consideration of the provision of the Services, the Customer
-                shall pay the following amounts to Spice Village in cleared
-                funds (and time for payment shall be of essence) in accordance
-                with the following (the "Due Dates"):-
+                shall pay the following amounts to Last Minute Wedding in
+                cleared funds (and time for payment shall be of essence) in
+                accordance with the following (the "Due Dates"):-
               </li>
               <ul>
                 <li>
                   Within 5 Business Days of the date of the relevant Invoice,
-                  the Customer shall pay Spice Village a non-refundable amount
-                  equal to 100% of the total cost of hire of the Sky Garden;
+                  the Customer shall pay Last Minute Wedding a non-refundable
+                  amount equal to 100% of the total cost of hire of the Sky
+                  Garden;
                 </li>
                 <li>
                   Within 5 Business Days of the date of the relevant Invoice,
-                  the Customer shall pay Spice Village the higher of: i) a
+                  the Customer shall pay Last Minute Wedding the higher of: i) a
                   non-refundable amount equal to the food and beverage minimum
                   spend payable (if any) as set out in the signed Order or; ii)
                   the 100% of the total cost of the food and beverages element
@@ -362,28 +369,29 @@ const Terms = () => {
                   Any additional costs incurred during the Event (including but
                   not limited to consumption, overtime, losses and breakages)
                   which shall be invoiced within 14 days of the Event Date and
-                  shall be payable by the Customer to Spice Village within 30
-                  days of the date of the relevant Invoice.
+                  shall be payable by the Customer to Last Minute Wedding within
+                  30 days of the date of the relevant Invoice.
                 </li>
               </ul>
               <li>Intellectual Property-</li>
               <ul>
                 <li>
                   All Intellectual Property Rights in or arising out of or in
-                  connection with the Services shall be owned by Spice Village.
+                  connection with the Services shall be owned by Last Minute
+                  Wedding.
                 </li>
                 <li>
-                  Spice Village acknowledges that, in respect of any third party
-                  Intellectual Property Rights, Spice Village's use of any such
-                  Intellectual Property Rights is conditional on the Customer
-                  obtaining a written licence from the relevant licensor on such
-                  terms as will entitle the Customer to license such rights to
-                  Spice Village.
+                  Last Minute Wedding acknowledges that, in respect of any third
+                  party Intellectual Property Rights, Last Minute Wedding's use
+                  of any such Intellectual Property Rights is conditional on the
+                  Customer obtaining a written licence from the relevant
+                  licensor on such terms as will entitle the Customer to license
+                  such rights to Last Minute Wedding.
                 </li>
                 <li>
-                  All Spice Village Materials and any Intellectual Property
-                  Rights therein are the exclusive property of Spice Village,
-                  unless stated otherwise in the Order
+                  All Last Minute Wedding Materials and any Intellectual
+                  Property Rights therein are the exclusive property of Last
+                  Minute Wedding, unless stated otherwise in the Order
                 </li>
               </ul>
               <li>Law and Jurisdiction</li>

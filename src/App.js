@@ -1,11 +1,11 @@
-import RouteHandler from './components/routehandler/RouteHandler'
+import RouteHandler from "./components/routehandler/RouteHandler";
 
-function App() {
+const App = () => {
   return (
     <div>
-        <RouteHandler />
+      <RouteHandler />
     </div>
   );
-}
+};
 
 export default App;

@@ -89,15 +89,15 @@ const About = () => {
         </p>
         <p className={style.text}>
           The Story of Last Minute Wedding is a story of taste, passion and
-          excellence. From a small corner shop in Tooting in 2004, Spice Village
-          expanded to become a multi-award-winning restaurant chain with fans
-          from Hollywood & Bollywood including the Mayor of London. We envisaged
-          a magic mix of spices, service and ambiance to deliver the healthiest
-          Pakistani and Indian cuisines in the UK. Our spicy fish, incredible
-          curries, delicious tikkas and mouth-watering kebabs vowed the
-          cosmopolitan audience of London. Thanks to Almighty’s blessings and
-          your trust and support, in 2019, we are bracing ourselves to expand to
-          Scotland and Wales with a nationwide network of franchises.
+          excellence. From a small corner shop in Tooting in 2004, Last Minute
+          Wedding expanded to become a multi-award-winning restaurant chain with
+          fans from Hollywood & Bollywood including the Mayor of London. We
+          envisaged a magic mix of spices, service and ambiance to deliver the
+          healthiest Pakistani and Indian cuisines in the UK. Our spicy fish,
+          incredible curries, delicious tikkas and mouth-watering kebabs vowed
+          the cosmopolitan audience of London. Thanks to Almighty’s blessings
+          and your trust and support, in 2019, we are bracing ourselves to
+          expand to Scotland and Wales with a nationwide network of franchises.
         </p>
         <p className={style.text}>
           Today, while we continue serving your favourite Indian, Pakistani,

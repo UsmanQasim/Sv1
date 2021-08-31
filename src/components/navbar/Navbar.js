@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Halal from "../../halal_logo.svg";
 import { SiFacebook } from "react-icons/si";
 import { AiOutlineInstagram } from "react-icons/ai";
-import logo from "../../GalleryPhotos/SVlogo.png";
+import logo from "../../sv-logo.png";
 
 const Navbar = () => {
   return (

@@ -9,17 +9,17 @@ const Covid = () => {
         <img src={logo} alt="little" className={style.imgstory} />
         <p className={style.title_story}>COVID-19 UPDATE</p>
         <p>
-          <b>Safety measures taken by Spice Village Group</b>
+          <b>Safety measures taken by Last Minute Wedding Group</b>
         </p>
         <div className={style.paragraph} style={{ maxWidth: "700px" }}>
           <p>
-            Spice Village is following strict Health & Safety Guidelines as
-            always, with additional COVID-19 measures in place which has allowed
-            us to maintain a 5-star food hygiene rating. In response to CDC and
-            Department of Health reports, we are taking additional care in our
-            operations out of an abundance of caution. Given that it is very
-            unlikely that you can catch coronavirus from food. COVID-19 is a
-            respiratory illness. It is not known to be transmitted by exposure
+            Last Minute Wedding is following strict Health & Safety Guidelines
+            as always, with additional COVID-19 measures in place which has
+            allowed us to maintain a 5-star food hygiene rating. In response to
+            CDC and Department of Health reports, we are taking additional care
+            in our operations out of an abundance of caution. Given that it is
+            very unlikely that you can catch coronavirus from food. COVID-19 is
+            a respiratory illness. It is not known to be transmitted by exposure
             to food or food packaging. For further information please read the
             guidance provided by Government and the European Food Safety
             Authority:
@@ -32,9 +32,9 @@ const Covid = () => {
             </a>
           </p>
           <p>
-            Spice Village benefits form a large and modern corporate catering
-            facility which allows us to maintain safe distance throughout the
-            building.
+            Last Minute Wedding benefits form a large and modern corporate
+            catering facility which allows us to maintain safe distance
+            throughout the building.
           </p>
           <ul>
             <li>

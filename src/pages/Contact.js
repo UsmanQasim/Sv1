@@ -152,23 +152,24 @@ const Contact = () => {
           <div className={style.checkbox}>
             <input
               type="checkbox"
-              value="I agree to receive emails from Spice Village on services/products they offer and allow them to contact me from time to time."
+              value="I agree to receive emails from Last Minute Wedding on services/products they offer and allow them to contact me from time to time."
               required
             />
             <p>
-              I agree to receive emails from Spice Village on services/products
-              they offer and allow them to contact me from time to time.
+              I agree to receive emails from Last Minute Wedding on
+              services/products they offer and allow them to contact me from
+              time to time.
             </p>
           </div>
           <div className={style.checkbox}>
             <input
               type="checkbox"
-              value="By submitting this form, you agree to Spice Village Terms &amp; Conditions and Privacy Notice."
+              value="By submitting this form, you agree to Last Minute Wedding Terms &amp; Conditions and Privacy Notice."
               required
             />
             <p>
-              By submitting this form, you agree to Spice Village Terms &amp;
-              Conditions and Privacy Notice.
+              By submitting this form, you agree to Last Minute Wedding Terms
+              &amp; Conditions and Privacy Notice.
             </p>
           </div>
           <div>

@@ -114,23 +114,23 @@ const Main = () => {
           <div className={style.paragraph}>
             <p>
               The Story of Last Minute Wedding is a story of taste, passion and
-              excellence. It all started by Suleman Raza, a teenager who
-              migrated to London in pursuit of a better life in early 2000,
-              found himself sweating as a chef in a Brixton based eatery in
-              South London inspired by his mother's secret recipes of homemade
-              Desi style food with an aspiration to start his own restaurant.
-              Eventually, his dream became a reality, and In 2004, Suleman and
-              his brother managed to open up a small 15 seater takeaway in
-              Tooting with true British Pakistani identity. His sheer passion,
-              determination and culinary vision has always been to claim
-              recognition for the authentic Pakistani cuisine in the UK
-              connecting you with its rich culture through its distinct taste,
-              desi flavors and infinite healing power of spices, offering a
-              journey to passionate food lovers from every walk of life to
-              celebrate good food and sharing intriguing food love stories .
+              excellence. It all started by Director, a teenager who migrated to
+              London in pursuit of a better life in early 2000, found himself
+              sweating as a chef in a Brixton based eatery in South London
+              inspired by his mother's secret recipes of homemade Desi style
+              food with an aspiration to start his own restaurant. Eventually,
+              his dream became a reality, and In 2004, Director and his brother
+              managed to open up a small 15 seater takeaway in Tooting with true
+              British Pakistani identity. His sheer passion, determination and
+              culinary vision has always been to claim recognition for the
+              authentic Pakistani cuisine in the UK connecting you with its rich
+              culture through its distinct taste, desi flavors and infinite
+              healing power of spices, offering a journey to passionate food
+              lovers from every walk of life to celebrate good food and sharing
+              intriguing food love stories .
             </p>
             <p>
-              Today, Spice Village group has expanded to become a
+              Today, Last Minute Wedding group has expanded to become a
               multi-award-winning British Pakistani restaurant chain to UK's
               leading events caterer due to its demand with profile followers
               from Hollywood & Bollywood.
@@ -168,18 +168,18 @@ const Main = () => {
               from its Mughal legacy. The various cuisines are derived from
               Pakistan's ethnic and cultural diversity. The blend of Indian, Far
               Eastern and Middle Eastern cooking techniques creates a
-              distinctive mix of complex flavours. Spice Village is pioneer in
-              introducing the authentic Pakistani cuisine in the UK, that was
-              previously confused with its well known South Asian neighbour,
-              India. We distinguished the Pakistani cuisine giving it unique,
-              rich and distinguishable Indus Valley identity. Spice Village
-              excel in serving sumptuous and uniquely tasteful Pakistani
-              cuisine. Our expert team of chefs use only the finest of
+              distinctive mix of complex flavours. Last Minute Wedding is
+              pioneer in introducing the authentic Pakistani cuisine in the UK,
+              that was previously confused with its well known South Asian
+              neighbour, India. We distinguished the Pakistani cuisine giving it
+              unique, rich and distinguishable Indus Valley identity. Last
+              Minute Wedding excel in serving sumptuous and uniquely tasteful
+              Pakistani cuisine. Our expert team of chefs use only the finest of
               ingredients and freshest of spices to create the most sought-after
               traditional Pakistani dishes. Thousands of reviews from the
               world’s most trusted review sites including Tripadvisors to
-              Squaremeal put Spice Village as a leading caterer in Pakistani
-              cuisine.
+              Squaremeal put Last Minute Wedding as a leading caterer in
+              Pakistani cuisine.
             </p>
           </div>
         </div>
@@ -196,18 +196,18 @@ const Main = () => {
               from its Mughal legacy. The various cuisines are derived from
               Pakistan's ethnic and cultural diversity. The blend of Indian, Far
               Eastern and Middle Eastern cooking techniques creates a
-              distinctive mix of complex flavours. Spice Village is pioneer in
-              introducing the authentic Pakistani cuisine in the UK, that was
-              previously confused with its well known South Asian neighbour,
-              India. We distinguished the Pakistani cuisine giving it unique,
-              rich and distinguishable Indus Valley identity. Spice Village
-              excel in serving sumptuous and uniquely tasteful Pakistani
-              cuisine. Our expert team of chefs use only the finest of
+              distinctive mix of complex flavours. Last Minute Wedding is
+              pioneer in introducing the authentic Pakistani cuisine in the UK,
+              that was previously confused with its well known South Asian
+              neighbour, India. We distinguished the Pakistani cuisine giving it
+              unique, rich and distinguishable Indus Valley identity. Last
+              Minute Wedding excel in serving sumptuous and uniquely tasteful
+              Pakistani cuisine. Our expert team of chefs use only the finest of
               ingredients and freshest of spices to create the most sought-after
               traditional Pakistani dishes. Thousands of reviews from the
               world’s most trusted review sites including Tripadvisors to
-              Squaremeal put Spice Village as a leading caterer in Pakistani
-              cuisine.
+              Squaremeal put Last Minute Wedding as a leading caterer in
+              Pakistani cuisine.
             </p>
           </div>
           <div className={style.section_5_left_div}>
@@ -251,15 +251,16 @@ const Main = () => {
           </div>
           <div className={style.floating_goldbar}>
             <div className={style.goldbar_container}>
-              <h2 className={style.golhead}>SPICE VILLAGE EXPERIENCE</h2>
+              <h2 className={style.golhead}>Last Minute Wedding EXPERIENCE</h2>
               <p className={style.exppra}>
-                At Spice Village, every menu has its unique story and origin.
-                Spice Village specialises in Halal Indian catering and Pakistani
-                catering where all delectable dishes are handpicked by our
-                award-winning chefs offering a wide range of choices while using
-                the finest and freshest of healthy ingredients. Our expert team
-                will organise complementary food tasting session helping you
-                design a bespoke menu for your unforgettable event.
+                At Last Minute Wedding, every menu has its unique story and
+                origin. Last Minute Wedding specialises in Halal Indian catering
+                and Pakistani catering where all delectable dishes are
+                handpicked by our award-winning chefs offering a wide range of
+                choices while using the finest and freshest of healthy
+                ingredients. Our expert team will organise complementary food
+                tasting session helping you design a bespoke menu for your
+                unforgettable event.
               </p>
               <div className={style.btnwrap}>
                 <Link
