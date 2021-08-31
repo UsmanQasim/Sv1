@@ -17,7 +17,7 @@
 
 .svbar:before {
   content: "";
-  border-top: 1px solid #9d915d;
+  border-top: 1px solid var(--primary);
   height: 1px;
   left: 0;
   right: 0;
@@ -31,7 +31,8 @@
   position: relative;
 }
 .svlogo {
-  height: 75px;
+  /* height: 75px; */
+  width: 250px;
 }
 
 .container {
@@ -57,7 +58,7 @@
 }
 
 .container .links:hover {
-  color: #9d9d9d;
+  color: var(--primary);
 }
 
 .bottomLine {

@@ -112,3 +112,10 @@
   background-color: #3b3f3f;
   color: var(--primary);
 }
+.submitbtn:disabled {
+  background-color: gray;
+}
+
+.submitbtn:disabled:hover {
+  color: white;
+}

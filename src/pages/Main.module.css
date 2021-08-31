@@ -92,9 +92,13 @@
   flex-direction: column;
   margin-bottom: 5px;
 }
+.section_3_head {
+  height: 120px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
 .imgstory {
-  height: 60px;
-  margin-top: 40px;
   margin-bottom: 5px;
 }
 .title_story {
@@ -249,9 +253,10 @@ p {
 
 .smallicon {
   width: auto;
-  height: 80px;
-  filter: invert(7%) sepia(100%) saturate(3%) hue-rotate(900deg) brightness(94%)
-    contrast(2000%);
+  width: 300px;
+  filter: grayscale();
+  filter: invert(100%) brightness(94%) sepia(100%) saturate(3%)
+    hue-rotate(900deg) brightness(94%) contrast(2000%);
 }
 .strip_left_text {
   margin-left: 30px;

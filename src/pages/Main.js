@@ -8,7 +8,6 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg";
 import img2 from "../GalleryPhotos/garden-room-at-syon-park.jpg";
 import img3 from "../GalleryPhotos/The-Walled-Garden-At-Syon.jpg";
-import logo from "../sv-logo.svg";
 import pakwed from "../GalleryPhotos/pakwed.jpg";
 import lastmin from "../GalleryPhotos/lastmin.jpg";
 // import Slider from "react-slick";
@@ -66,48 +65,75 @@ const Main = () => {
             <Carousel.Item className="slider-item-div">
               <img className={style.images} src={img2} alt="First slide" />
               <Carousel.Caption className={style.coursal_text}>
-                <p className={style.text}>
-                  Last Minute Catering & Events{" "}
+                <div className={style.text}>
+                  Last Minute Catering &amp; Events{" "}
                   <p className={style.textby}>By Last Minute Wedding</p>
-                </p>
+                </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
-                <button className={style.btnCou}>Enquire Now</button>
+                <button className={style.btnCou}>
+                  <Link
+                    to="/lastminuteoffers"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    Enquire Now
+                  </Link>
+                </button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="slider-item-div">
               <img className={style.images} src={img1} alt="Second slide" />
               <Carousel.Caption className={style.coursal_text}>
-                <p className={style.text}>
-                  Last Minute Catering & Events{" "}
+                <div className={style.text}>
+                  Last Minute Catering &amp; Events{" "}
                   <p className={style.textby}>By Last Minute Wedding</p>
-                </p>
+                </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
-                <button className={style.btnCou}>Enquire Now</button>
+                <button className={style.btnCou}>
+                  <Link
+                    to="/lastminuteoffers"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    Enquire Now
+                  </Link>
+                </button>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item className="slider-item-div">
               <img className={style.images} src={img3} alt="Third slide" />
               <Carousel.Caption className={style.coursal_text}>
-                <p className={style.text}>
-                  Last Minute Catering & Events{" "}
+                <div className={style.text}>
+                  Last Minute Catering &amp; Events{" "}
                   <p className={style.textby}>By Last Minute Wedding</p>
-                </p>
+                </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
-                <button className={style.btnCou}>Enquire Now</button>
+                <button className={style.btnCou}>
+                  <Link
+                    to="/lastminuteoffers"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    Enquire Now
+                  </Link>
+                </button>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </div>
 
         <div className={style.section_3}>
-          <img src={logo} alt="little" className={style.imgstory} />
+          <div className={style.section_3_head}>
+            <img
+              src="images/heading.svg"
+              alt="little"
+              className={style.imgstory}
+            />
+          </div>
           <p className={style.title_story}>OUR STORY</p>
           <p>
             <b>
-              MULTI - AWARD - WINNING BRITISH PAKISTANI RESTAURANTS GROUP &
+              MULTI - AWARD - WINNING BRITISH PAKISTANI RESTAURANTS GROUP &amp;
               EVENT CATERERS
             </b>
           </p>
@@ -119,7 +145,7 @@ const Main = () => {
               sweating as a chef in a Brixton based eatery in South London
               inspired by his mother's secret recipes of homemade Desi style
               food with an aspiration to start his own restaurant. Eventually,
-              his dream became a reality, and In 2004, Director and his brother
+              his dream became a reality, and In 2004, Directors and his brother
               managed to open up a small 15 seater takeaway in Tooting with true
               British Pakistani identity. His sheer passion, determination and
               culinary vision has always been to claim recognition for the
@@ -133,16 +159,16 @@ const Main = () => {
               Today, Last Minute Wedding group has expanded to become a
               multi-award-winning British Pakistani restaurant chain to UK's
               leading events caterer due to its demand with profile followers
-              from Hollywood & Bollywood.
+              from Hollywood &amp; Bollywood.
             </p>
             <p>
               Director has been recently awarded the 'Curry King in Greater
               London 2019 Award" and has also been ranked amongst the 100 most
-              influential persons in the British food & hospitality industry.
-              Director Regularly appears on radio, newspapers and TV, including
-              BBC as a restaurateur, food and business expert, contributing his
-              expertise to inspire, build and reflect the true British success
-              story.
+              influential persons in the British food &amp; hospitality
+              industry. Director Regularly appears on radio, newspapers and TV,
+              including BBC as a restaurateur, food and business expert,
+              contributing his expertise to inspire, build and reflect the true
+              British success story.
             </p>
           </div>
         </div>
@@ -223,9 +249,15 @@ const Main = () => {
 
         <div className={style.strip}>
           <div className={style.strip_container}>
-            <img src={logo} alt="little" className={style.smallicon} />
+            <img
+              src="images/sv-logo.svg"
+              alt="little"
+              className={style.smallicon}
+            />
             <div className={style.strip_left_text}>
-              <p className={style.pr}>Want to view & book your next event?</p>
+              <p className={style.pr}>
+                Want to view &amp; book your next event?
+              </p>
               <h3 className={style.callpr}>
                 Call Us Now{" "}
                 <a

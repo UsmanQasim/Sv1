@@ -6,7 +6,7 @@ import { SidemenuData } from "./SidemenuData";
 import "./Sidemenu.css";
 import { IconContext } from "react-icons";
 
-const Sidemenu = () => {
+const Sidemenu = ({ children }) => {
   const [sidebar, setsidebar] = useState(false);
   const showSidebar = () => setsidebar(!sidebar);
   return (
@@ -37,6 +37,7 @@ const Sidemenu = () => {
                 </li>
               );
             })}
+            {children}
           </ul>
         </nav>
       </IconContext.Provider>

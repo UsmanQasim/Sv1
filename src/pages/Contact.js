@@ -184,7 +184,7 @@ const Contact = () => {
               type="submit"
               className={style.submitbtn}
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : false}
+              disabled={captchaSubmitted ? false : true}
             >
               SUBMIT
             </button>

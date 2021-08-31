@@ -18,21 +18,19 @@ const Gallery = () => {
         <AiOutlineClose onClick={() => setModel(false)} />
       </div>
       <div className="gallery">
-        {GalleryPhotos
-          ? GalleryPhotos.map((item, key) => (
-              <div
-                className="pics"
-                key={key}
-                onClick={() => getImg(item.default)}
-              >
-                <img
-                  src={item.default}
-                  alt="images"
-                  style={{ width: "100%" }}
-                />
-              </div>
-            ))
-          : "LOADING! Getting Images..."}
+        {GalleryPhotos ? (
+          GalleryPhotos.map((item, key) => (
+            <div
+              className="pics"
+              key={key}
+              onClick={() => getImg(item.default)}
+            >
+              <img src={item.default} alt="images" style={{ width: "100%" }} />
+            </div>
+          ))
+        ) : (
+          <img alt="loader" src="../utils/spinner.gif" />
+        )}
       </div>
     </>
   );

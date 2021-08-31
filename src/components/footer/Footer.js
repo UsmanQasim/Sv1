@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import styles from "../footer/Footer.module.css";
-import logo from "../../sv-logo.svg";
 
 const footer = () => {
   return (
@@ -10,7 +9,11 @@ const footer = () => {
       <Container className={styles.mainContainer}>
         <Container className={styles.svbar}>
           <span className={styles.svbarlogo}>
-            <img src={logo} className={styles.svlogo} alt="Sv Logo" />
+            <img
+              src="/images/sv-logo.svg"
+              className={styles.svlogo}
+              alt="Sv Logo"
+            />
           </span>
           <hr />
         </Container>

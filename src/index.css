@@ -39,3 +39,23 @@ input[type="number"] {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+/* body:after,
+body:before {
+  content: "";
+  position: fixed;
+  background: red;
+  z-index: 99999;
+}
+body:after {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+body:before {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+} */
