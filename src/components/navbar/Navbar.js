@@ -2,10 +2,10 @@ import React, { useState, useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidemenu from "../sidemenu/Sidemenu";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Halal from "../../halal_logo.svg";
 import { SiFacebook } from "react-icons/si";
-import { AiOutlineInstagram } from "react-icons/ai";
+import { AiOutlineInstagram, AiFillPhone } from "react-icons/ai";
 
 const Navbar = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -23,24 +23,27 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.left_nev}>
-          <img src={Halal} alt="halallogo" className={styles.halallogo} />
-          <h2 className={styles.left_nev_text}>
-            Call &nbsp;
-            <a href="tel:020 8680 8844" data-tip="" className={styles.telno}>
-              {" "}
-              020 8680 8844{" "}
-            </a>
-          </h2>
-        </div>
-        <div className={styles.center_nev}>
+        {width > 600 ? (
+          <div className={`${styles.left_nev} ${styles.navSection}`}>
+            <img src={Halal} alt="halallogo" className={styles.halalLogo} />
+            <div className={styles.left_nev_text}>
+              <AiFillPhone />
+              <Link to={{ pathname: "tel:020 8680 8844" }} target="_blank">
+                020 8680 8844
+              </Link>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+        <div className={`${styles.center_nev} ${styles.navSection}`}>
           <img
             src="images/sv-logo.svg"
             alt="little"
             className={styles.logoimg}
           />
         </div>
-        <div className={styles.right_nev}>
+        <div className={`${styles.right_nev} ${styles.navSection}`}>
           <div className={styles.right_nev_text}>
             {width > 800 ? (
               <>
@@ -65,7 +68,11 @@ const Navbar = () => {
                 &nbsp;
               </>
             ) : (
-              ""
+              <Link to={{ pathname: "tel:020 8680 8844" }} target="_blank">
+                <label>
+                  <AiFillPhone size={22} />
+                </label>
+              </Link>
             )}
             <Sidemenu className={styles.right_icons}>
               {width <= 800 ? (
@@ -89,6 +96,11 @@ const Navbar = () => {
                     />
                   </a>
                   &nbsp;
+                  <img
+                    src={Halal}
+                    alt="halallogo"
+                    className={styles.halalLogo}
+                  />
                 </div>
               ) : (
                 ""
@@ -97,23 +109,28 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={styles.linkscontainer}>
-        <Link to="/">
-          <button className={styles.linkbtn}>Pakistani Wedding</button>
-        </Link>
-        <Link to="/lastminuteoffers">
-          <button className={styles.linkbtn}>Last Minute Offers</button>
-        </Link>
-        <Link to="/about">
-          <button className={styles.linkbtn}>About</button>
-        </Link>
-        <Link to="/gallery">
-          <button className={styles.linkbtn}>Gallery</button>
-        </Link>
-        <Link to="/contact">
-          <button className={styles.linkbtn}>Contact Us</button>
-        </Link>
-      </div>
+
+      {width > 800 ? (
+        <div className={styles.linksContainer}>
+          <NavLink to="/">
+            <button className={styles.linkbtn}>Pakistani Wedding</button>
+          </NavLink>
+          <NavLink to="/lastminuteoffers">
+            <button className={styles.linkbtn}>Last Minute Offers</button>
+          </NavLink>
+          <NavLink to="/about">
+            <button className={styles.linkbtn}>About</button>
+          </NavLink>
+          <NavLink to="/gallery">
+            <button className={styles.linkbtn}>Gallery</button>
+          </NavLink>
+          <NavLink to="/contact">
+            <button className={styles.linkbtn}>Contact Us</button>
+          </NavLink>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

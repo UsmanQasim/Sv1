@@ -7,9 +7,9 @@
   align-items: center;
   z-index: 50;
 }
+
 .menu-bar {
-  margin-left: 2rem;
-  font-size: 2rem;
+  margin: 0 7px;
   background: none;
 }
 
@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  right: -100%;
+  right: -300%;
   top: 0;
   transition: 850ms;
 }
@@ -68,7 +68,9 @@
 
 .nav-toggle {
   background-color: #060b26;
-  width: 100%;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
   height: 80px;
   display: flex;
   justify-content: flex-start;

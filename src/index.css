@@ -40,7 +40,18 @@ input[type="number"] {
   background: #555;
 }
 
-/* body:after,
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body:after,
 body:before {
   content: "";
   position: fixed;
@@ -58,4 +69,4 @@ body:before {
   top: 0;
   bottom: 0;
   width: 1px;
-} */
+}

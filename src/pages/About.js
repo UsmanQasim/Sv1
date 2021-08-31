@@ -1,5 +1,4 @@
 import React from "react";
-import smalllogo from "../sv-logo.svg";
 import style from "./About.module.css";
 // import small3 from "../GalleryPhotos/About Slider/AfraAward1.png";
 // import small4 from "../GalleryPhotos/About Slider/asiancurryawards.png";
@@ -57,7 +56,7 @@ const About = () => {
   return (
     <>
       <div className={style.section}>
-        <img src={smalllogo} alt="logo" className={style.imgstory} />
+        <img src="images/sv-logo.svg" alt="logo" className={style.imgstory} />
         <p className={style.title_story}>DIRECTOR'S MESSAGE</p>
         <p className={style.text}>
           At Last Minute Wedding, every meal has a story. Sometimes two love

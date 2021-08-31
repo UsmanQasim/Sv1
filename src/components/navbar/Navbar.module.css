@@ -1,19 +1,14 @@
 @import "../../colors.css";
 
-* {
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
-}
+/*
 .container {
   display: flex;
-  /* overflow: hidden; */
   justify-content: space-between;
   align-items: center;
   position: sticky;
   background-color: white;
   top: 0;
-  height: 90px;
+  height: 100px;
   width: 100%;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -21,11 +16,11 @@
 }
 .left_nev {
   color: var(--primary);
+  width: 500px;
   display: flex;
   justify-content: flex-start;
   padding-left: 25px;
   align-items: center;
-  width: 40%;
   flex-direction: row;
 }
 .halallogo {
@@ -40,7 +35,6 @@
   align-items: center;
   font-family: Merriweather, serif;
   font-weight: 400;
-  margin-left: 10px;
   font-size: 1.4rem;
 }
 .telno {
@@ -55,18 +49,17 @@
 }
 
 .center_nev {
-  display: flex;
   height: 100px;
+  width: 500px;
+  display: flex;
   overflow: hidden;
   padding: 10px 0px;
+  object-fit: contain;
   justify-content: center;
-  text-align: center;
-  padding-right: 120px;
 }
 
 .logoimg {
   padding: 2px;
-  /* width: 300px; */
   object-fit: cover;
 }
 .logoimg:hover {
@@ -78,9 +71,9 @@
 }
 
 .right_nev {
+  width: 500px;
   display: flex;
   text-align: right;
-  width: 30%;
   justify-content: flex-end;
   align-items: center;
 }
@@ -207,23 +200,17 @@
     display: none;
   }
   .center_nev {
+    object-fit: contain;
     padding-right: 0px;
-    width: 30%;
   }
   .right_icons {
     font-size: 35px;
-  }
-  .logoimg {
-    height: 80px;
   }
 }
 
 @media (max-width: 680px) {
   .linkbtn {
     font-size: 11px;
-  }
-  .logoimg {
-    height: 65px;
   }
   .left_nev {
     width: 30%;
@@ -247,44 +234,183 @@
     display: none;
   }
   .halallogo {
-    margin-left: 50px;
+    margin-left: 30px;
     height: 30px;
     object-fit: cover;
   }
   .left_nev {
     flex-direction: column;
+    padding-right: 0;
+    width: 100px;
     align-items: flex-start;
-    width: 40%;
-    padding-left: 2px;
   }
-  .left_nev_text {
-    padding-left: 1px;
-    padding-bottom: 5px;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-    font-size: 12px;
-    margin: 0;
+  .telno {
+    background-color: forestgreen;
+    font-size: 13px;
   }
   .center_nev {
-    padding-right: 0px;
-    width: 30%;
+    width: 100px;
+    object-fit: contain;
   }
-  .logoimg {
-    height: 65px;
-  }
-
   .right_nev {
-    width: 30%;
-  }
-  .follow_p {
-    display: none;
-  }
-  .right_icons {
-    font-size: 25px;
+    width: 100px;
   }
 }
 @media (max-width: 400px) {
   .left_nev_text {
     font-size: 12px;
   }
+} */
+
+.container {
+  height: auto;
+  max-height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 19;
+
+  background: white;
+}
+
+.navSection {
+  width: 33%;
+  max-width: 250px;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+}
+
+.left_nev {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.halalLogo {
+  max-width: 42px;
+}
+
+.left_nev_text {
+  font-size: 16px;
+  border: 1px solid transparent;
+  padding: 3px 2px;
+
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.left_nev_text:hover {
+  border-bottom: 1px solid var(--primary);
+}
+
+.left_nev_text a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.center_nev {
+  margin: 5px 0;
+  display: flex;
+  justify-content: center;
+  min-width: 175px;
+}
+
+.center_nev .logoimg {
+  width: 90%;
+  margin: 5px 0;
+}
+
+.right_nev_text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.right_nev_text a {
+  color: var(--primary);
+}
+
+.right_nev_text label {
+  border: 2px solid var(--primary);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin: 0 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.linksContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+  min-height: 80px;
+  background: var(--primary);
+}
+
+.linkbtn {
+  width: 100%;
+  padding: 8px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 1.5px;
+  color: white;
+  position: relative;
+  border: 0;
+  transition: 0.6s;
+  background-color: transparent;
+}
+
+.linkbtn:hover {
+  text-shadow: 0 0 5px black;
+  color: rgb(255, 255, 255);
+  transition: 0.6s;
+  transition-property: ease-in-out;
+  cursor: pointer;
+}
+
+.linkbtn::after {
+  content: "";
+  height: 5px;
+  width: 0px;
+  background: pink;
+  box-shadow: 0px 0px 2px black;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -5px;
+  right: 0%;
+  transition: 0.9s;
+}
+
+.linkbtn:hover:after {
+  width: 100%;
+  left: 0%;
+  background-color: white;
+}
+
+.nav_sm {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav_sm .halalLogo {
+  margin: 0 5px;
+  width: 40px;
 }

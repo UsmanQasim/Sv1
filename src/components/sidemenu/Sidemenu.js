@@ -14,18 +14,20 @@ const Sidemenu = ({ children }) => {
       <IconContext.Provider value={{ color: "maroon" }}>
         <div className="navbar">
           <Link to="#" className="menu-bars">
-            <GiHamburgerMenu className="icon-style" onClick={showSidebar} />
+            <GiHamburgerMenu
+              size={30}
+              className="icon-style"
+              onClick={showSidebar}
+            />
           </Link>
         </div>
         <nav
           style={{ zIndex: "10000" }}
           className={sidebar ? "nav-menu active" : "nav-menu"}
         >
-          <ul className="nav-menu-items" onClick={showSidebar}>
-            <li className="navbar-toggle">
-              <Link to="#" className="menu-bars">
-                <AiOutlineClose className="icon-style" />
-              </Link>
+          <ul className="nav-menu-items">
+            <li className="navbar-toggle" onClick={showSidebar}>
+              <AiOutlineClose className="icon-style" />
             </li>
             {SidemenuData.map((item, index) => {
               return (

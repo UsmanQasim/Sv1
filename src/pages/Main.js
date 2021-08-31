@@ -8,8 +8,8 @@ import "../../node_modules/slick-carousel/slick/slick-theme.css";
 import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg";
 import img2 from "../GalleryPhotos/garden-room-at-syon-park.jpg";
 import img3 from "../GalleryPhotos/The-Walled-Garden-At-Syon.jpg";
-import pakwed from "../GalleryPhotos/pakwed.jpg";
-import lastmin from "../GalleryPhotos/lastmin.jpg";
+import pakwed from "../GalleryPhotos/_AKS4325.JPG";
+import lastmin from "../GalleryPhotos/phototemp-min.jpg";
 // import Slider from "react-slick";
 // import small1 from "../GalleryPhotos/sponsor slides/clifton.png";
 // import small2 from "../GalleryPhotos/sponsor slides/csc-min.png";
@@ -59,7 +59,7 @@ import lastmin from "../GalleryPhotos/lastmin.jpg";
 const Main = () => {
   return (
     <>
-      <div>
+      <div className={style.container}>
         <div className={style.coursal_container}>
           <Carousel className="carousel-style">
             <Carousel.Item className="slider-item-div">
