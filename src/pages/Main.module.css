@@ -270,6 +270,15 @@ p {
 }
 .strip_left_text h3 {
   color: white;
+  width: 80%;
+}
+.linkStip a {
+  color: white;
+  text-decoration: none;
+}
+.linkStip a:hover {
+  color: wheat;
+  text-decoration: underline;
 }
 .pr {
   word-spacing: 3px;

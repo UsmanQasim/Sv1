@@ -50,7 +50,7 @@ a:hover {
   color: inherit;
   cursor: pointer;
 }
-
+/* 
 body:after,
 body:before {
   content: "";
@@ -69,4 +69,4 @@ body:before {
   top: 0;
   bottom: 0;
   width: 1px;
-}
+} */

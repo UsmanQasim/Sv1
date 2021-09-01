@@ -31,7 +31,7 @@ const Sidemenu = ({ children }) => {
             </li>
             {SidemenuData.map((item, index) => {
               return (
-                <li key={index} className={item.cName}>
+                <li key={index} className={item.cName} onClick={showSidebar}>
                   <Link to={item.path}>
                     {item.icon}
                     <span className="sidemenu_text_color">{item.title}</span>

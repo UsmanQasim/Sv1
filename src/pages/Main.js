@@ -9,7 +9,7 @@ import img1 from "../GalleryPhotos/Anarkali-Chat-1.jpg";
 import img2 from "../GalleryPhotos/garden-room-at-syon-park.jpg";
 import img3 from "../GalleryPhotos/The-Walled-Garden-At-Syon.jpg";
 import pakwed from "../GalleryPhotos/_AKS4325.JPG";
-import lastmin from "../GalleryPhotos/phototemp-min.jpg";
+import lastmin from "../GalleryPhotos/DSC06869.jpg";
 // import Slider from "react-slick";
 // import small1 from "../GalleryPhotos/sponsor slides/clifton.png";
 // import small2 from "../GalleryPhotos/sponsor slides/csc-min.png";
@@ -259,18 +259,12 @@ const Main = () => {
                 Want to view &amp; book your next event?
               </p>
               <h3 className={style.callpr}>
-                Call Us Now{" "}
-                <a
-                  href="tel:020 8680 8844"
-                  data-tip=""
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    wordSpacing: "1px",
-                  }}
-                >
-                  020 8680 8844
-                </a>
+                Call Us Now <br />
+                <div className={style.linkStip}>
+                  <Link to={{ pathname: "tel:020 8680 8844" }} target="_blank">
+                    020 8680 8844
+                  </Link>
+                </div>
               </h3>
             </div>
           </div>
