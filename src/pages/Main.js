@@ -213,27 +213,16 @@ const Main = () => {
         <div className={style.section_5}>
           <div className={style.section_5_right_div}>
             <p className={style.text_section_5_head}>
-              <b className={style.headertitle}>Last Minute Catering</b>
+              <b className={style.headertitle}>LAST MINUTE WEDDINGS</b>
             </p>
             <p className={style.right_div_text_sec5}>
-              HMC certified halal Pakistani menu Pakistani cuisine can be
-              characterized by a blend of various regional cooking traditions of
-              the South Asian subcontinent, Central Asia as well as elements
-              from its Mughal legacy. The various cuisines are derived from
-              Pakistan's ethnic and cultural diversity. The blend of Indian, Far
-              Eastern and Middle Eastern cooking techniques creates a
-              distinctive mix of complex flavours. Last Minute Wedding is
-              pioneer in introducing the authentic Pakistani cuisine in the UK,
-              that was previously confused with its well known South Asian
-              neighbour, India. We distinguished the Pakistani cuisine giving it
-              unique, rich and distinguishable Indus Valley identity. Last
-              Minute Wedding excel in serving sumptuous and uniquely tasteful
-              Pakistani cuisine. Our expert team of chefs use only the finest of
-              ingredients and freshest of spices to create the most sought-after
-              traditional Pakistani dishes. Thousands of reviews from the
-              world’s most trusted review sites including Tripadvisors to
-              Squaremeal put Last Minute Wedding as a leading caterer in
-              Pakistani cuisine.
+              At Last Minute Weddings, we can help you find the best wedding
+              offers available across our wedding venues in London including
+              catering. We offer late availability, last minute deals,
+              discounted wedding packages, catering packages, and great deals on
+              off peak wedding dates. Last Minute Weddings match engaged couples
+              with available venues & suppliers for the Wedding Date of their
+              dreams!
             </p>
           </div>
           <div className={style.section_5_left_div}>
