@@ -67,7 +67,9 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <div className={style.text}>
                   Last Minute Catering &amp; Events{" "}
-                  <p className={style.textby}>By Last Minute Wedding</p>
+                  <p className={style.textby}>
+                    Book Your Wedding With Confidence
+                  </p>
                 </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
@@ -86,7 +88,9 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <div className={style.text}>
                   Last Minute Catering &amp; Events{" "}
-                  <p className={style.textby}>By Last Minute Wedding</p>
+                  <p className={style.textby}>
+                    Book Your Wedding With Confidence
+                  </p>
                 </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
@@ -105,7 +109,9 @@ const Main = () => {
               <Carousel.Caption className={style.coursal_text}>
                 <div className={style.text}>
                   Last Minute Catering &amp; Events{" "}
-                  <p className={style.textby}>By Last Minute Wedding</p>
+                  <p className={style.textby}>
+                    Book Your Wedding With Confidence
+                  </p>
                 </div>
               </Carousel.Caption>
               <Carousel.Caption className={style.buttonArea}>
