@@ -35,16 +35,8 @@ const Contact = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (
-      !fullName ||
-      !phone ||
-      !email ||
-      !numOfGuests ||
-      !date ||
-      !eventType ||
-      !venue
-    ) {
-      setError("Fill All The Fields");
+    if (!fullName || !phone || !email || !numOfGuests || !date || !eventType) {
+      setError("Please fill all the fields above ");
       return;
     }
 
@@ -184,7 +176,7 @@ const Contact = () => {
               type="submit"
               className={style.submitbtn}
               onClick={submitHandler}
-              disabled={captchaSubmitted ? false : true}
+              disabled={captchaSubmitted ? false : false}
             >
               SUBMIT
             </button>
