@@ -6,6 +6,7 @@ import Select from "react-select";
 import { API_KEY } from "../utlis/secrets";
 import swal from "sweetalert";
 import moment from "moment";
+import Modal from '../components/modal/Modal';
 
 const options = [
   { value: "Wedding", label: "Wedding" },
@@ -61,6 +62,7 @@ const LastMinuteOffers = () => {
   const [howuknow, setHowuKnow] = useState("");
   const [captchaSubmitted, setCaptchaSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
 
   const onChange = (value) => {
     setCaptchaSubmitted(value);
@@ -118,7 +120,12 @@ const LastMinuteOffers = () => {
 
   return (
     <>
-      <form>
+      {modalOpen ? (
+        <Modal setModalOpen={setModalOpen} text="Enquiry Sent Successfully!" />
+      ) : (
+        ""
+      )}
+      <form onSubmit={submitHandler}>
         <div className={style.container}>
           <div className={style.sections}>
             <div className={style.labelinput}>
@@ -394,7 +401,6 @@ const LastMinuteOffers = () => {
             <Button
               variant="outline-primary"
               size="lg"
-              onClick={submitHandler}
               disabled={captchaSubmitted ? false : true}
             >
               Submit

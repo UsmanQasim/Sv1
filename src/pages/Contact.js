@@ -35,19 +35,33 @@ const Contact = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (!fullName || !phone || !email || !numOfGuests || !date || !eventType) {
-      setError("Please fill all the fields above ");
+    // if (!fullName || !phone || !email || !numOfGuests || !date || !eventType) {
+    //   setError("Please fill all the fields above ");
+    //   return;
+    // }
+
+    if (
+      fullName === "" ||
+      phone === "" ||
+      phone === 0 ||
+      email === "" ||
+      numOfGuests === "" ||
+      numOfGuests === 0 ||
+      date === "" ||
+      eventType === ""
+    ) {
+      setError("Please fill all the above fields...");
       return;
     }
-
+    
     const reqURL = "/api/v1/contactInquiries/insert.php?api_key=" + API_KEY;
-
+    
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
       switch (this.responseText) {
         case "success":
+          
           setModalOpen(true);
-
           //if you want to reload the page, uncomment the following line
           // window.location.reload();
 
@@ -75,7 +89,7 @@ const Contact = () => {
         ""
       )}
       <section className={style.contactFormContainer}>
-        <form className={style.form}>
+        <form className={style.form} onSubmit={submitHandler}>
           <div>
             <p className={style.title_story}>Contact us today</p>
           </div>
@@ -115,13 +129,12 @@ const Contact = () => {
           />
           <input
             className={style.inputField}
-            placeholder="Prefered Date Of Event"
-            type="text"
-            onFocus={(e) => (e.target.type = "date")}
-            onBlur={(e) => (e.target.type = "text")}
+            placeholder="Preferred Date Of Event"
+            type="date"
+            // onFocus={(e) => e.target.type = "date"}
+            // onBlur={(e) => (e.target.type = "text")}
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            id="date"
             min={moment().format("YYYY-MM-DD")}
             required
           />
@@ -130,7 +143,10 @@ const Contact = () => {
               options={options}
               className={style.select}
               placeholder="Event Type"
-              onChange={(e) => setEventType(e.value)}
+              onChange={(e) => {
+                console.log(e.value, eventType);
+                setEventType(e.value);
+              }}
             />
           </div>
           <input
@@ -139,7 +155,6 @@ const Contact = () => {
             onChange={(e) => setVenue(e.target.value)}
             type="text"
             placeholder="Venue if any"
-            required
           />
           <div className={style.checkbox}>
             <input
@@ -175,7 +190,7 @@ const Contact = () => {
             <button
               type="submit"
               className={style.submitbtn}
-              onClick={submitHandler}
+              // onClick={submitHandler}
               disabled={captchaSubmitted ? false : false}
             >
               SUBMIT
