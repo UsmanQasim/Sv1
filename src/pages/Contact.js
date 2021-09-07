@@ -53,14 +53,13 @@ const Contact = () => {
       setError("Please fill all the above fields...");
       return;
     }
-    
+
     const reqURL = "/api/v1/contactInquiries/insert.php?api_key=" + API_KEY;
-    
+
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
       switch (this.responseText) {
         case "success":
-          
           setModalOpen(true);
           //if you want to reload the page, uncomment the following line
           // window.location.reload();
@@ -191,7 +190,7 @@ const Contact = () => {
               type="submit"
               className={style.submitbtn}
               // onClick={submitHandler}
-              disabled={captchaSubmitted ? false : false}
+              disabled={captchaSubmitted ? false : true}
             >
               SUBMIT
             </button>
